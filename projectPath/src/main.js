@@ -4,7 +4,15 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
-import Home from './components/HelloFromVux'
+import Home from './components/Home'
+
+import ECharts from 'vue-echarts/components/ECharts.vue'
+
+// 手动引入 ECharts 各模块来减小打包体积
+import 'echarts/lib/chart/bar'
+import 'echarts/lib/component/tooltip'
+
+Vue.component('chart', ECharts)
 
 Vue.use(VueRouter)
 

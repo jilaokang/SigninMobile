@@ -1,22 +1,28 @@
 <template>
   <div>
+    <dontkonw></dontkonw>
     <GroupTitle>更多功能</GroupTitle>
     <Grid class="bgWhite" :cols="4" :show-lr-borders="false" :show-vertical-dividers="false">
       <GridItem :label="i.label" v-for="i in GetPremisson" :key="i.length">
         <font :color="i.color" slot="icon" class="iconfont" :class="i.icon"></font>
       </GridItem>
     </Grid>
+    <Divider>武汉学院-信息中心</Divider>
   </div>
 </template>
 
 <script>
   /* eslint-disable */
-  import {Grid, GridItem, GroupTitle} from 'vux'
+  import {Grid, GridItem, GroupTitle,Divider} from 'vux'
+
+  import dontkonw from './boss/dontkonw.vue'
 
   export default {
     components: {
       Grid, GridItem,
-      GroupTitle
+      GroupTitle,
+      Divider,
+      dontkonw
     },
     data() {
       return {
