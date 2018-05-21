@@ -39,7 +39,7 @@
           }, {
             label: "教师分析",
             icon: "icon-custom-teacher",
-            color: "#f07818"
+            color: "#E7475E"
           }, {
             label: "课程分析分析",
             icon: "icon-xinrenkecheng",
@@ -49,7 +49,7 @@
           gridList: [{
             label: "校园分析",
             icon: "icon-xueyuan",
-            color: "#f07818"
+            color: "#E7475E"
           }, {
             label: "系部分析",
             icon: "icon-huijihesuan",
@@ -81,7 +81,8 @@
   .bgWhite {
     background: white;
   }
-  .weui-grids:before,.weui-grid:after{
-    border: none!important;
+
+  .weui-grids:before, .weui-grid:after {
+    border: none !important;
   }
 </style>
