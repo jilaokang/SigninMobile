@@ -1,29 +1,19 @@
 <template>
   <div>
-    <Swiper height="300px" style="width:85%;margin:0 auto;" dots-position="center">
+    <Swiper height="300px" style="margin: 16px 0" dots-position="center">
       <SwiperItem>
-        <v-chart :data="data">
-          <v-scale x  :tick-count="7"/>
-          <v-scale y :min="70" :max="90" alias="签到情况" :tick-count="10"/>
-          <v-point
-            :style="{
-          stroke: '#fff',
-          lineWidth: 1
-        }"
-            shape="smooth"/>
+        <v-chart :data="swiperlist[0].data">
+          <v-scale x :tick-count="7"/>
+          <v-scale y :min="70" :max="90" :tick-count="10"/>
+          <v-point series-field="name" :style="{stroke: '#fff',lineWidth: 1}" shape="smooth"/>
           <v-line shape="smooth"/>
         </v-chart>
       </SwiperItem>
       <SwiperItem>
-        <v-chart :data="data">
+        <v-chart :data="swiperlist[1].data">
           <v-scale x :tick-count="7"/>
-          <v-scale y :min="70" :max="90" alias="签到情况" :tick-count="10"/>
-          <v-point
-            :style="{
-          stroke: '#fff',
-          lineWidth: 1
-        }"
-            shape="smooth"/>
+          <v-scale y :min="70" :max="90" :tick-count="10"/>
+          <v-point series-field="name" :style="{stroke: '#fff',lineWidth: 1}" shape="smooth"/>
           <v-line shape="smooth"/>
         </v-chart>
       </SwiperItem>
@@ -33,7 +23,7 @@
 
 <script>
   /* eslint-disable */
-  import {VChart, VLine, VPoint, VScale, VTooltip, Swiper, SwiperItem} from 'vux'
+  import {VChart, VLine, VPoint, VScale, VTooltip, Swiper, SwiperItem, VBar,} from 'vux'
 
   export default {
     components: {
@@ -41,19 +31,31 @@
       VPoint,
       VLine,
       VScale,
-      VTooltip, Swiper, SwiperItem
+      VTooltip, Swiper, SwiperItem, VBar
     },
     data() {
       return {
-        data: [
-          {time: '周一', tem: 75},
-          {time: '周二', tem: 78},
-          {time: '周三', tem: 85},
-          {time: '周四', tem: 89},
-          {time: '周五', tem: 90},
-          {time: '周六', tem: 85},
-          {time: '周末', tem: 83}
-        ]
+        swiperlist: [{
+          data: [
+            {time: '周一', 上周全校上课情况: 75, name: "上周全校上课情况"},
+            {time: '周二', 上周全校上课情况: 78, name: "上周全校上课情况"},
+            {time: '周三', 上周全校上课情况: 85, name: "上周全校上课情况"},
+            {time: '周四', 上周全校上课情况: 89, name: "上周全校上课情况"},
+            {time: '周五', 上周全校上课情况: 90, name: "上周全校上课情况"},
+            {time: '周六', 上周全校上课情况: 85, name: "上周全校上课情况"},
+            {time: '周末', 上周全校上课情况: 83, name: "上周全校上课情况"}
+          ]
+        }, {
+          data: [
+            {time: '第一周', 近七周上课情况: 93, name: "近七周上课情况"},
+            {time: '第二周', 近七周上课情况: 95, name: "近七周上课情况"},
+            {time: '第三周', 近七周上课情况: 86, name: "近七周上课情况"},
+            {time: '第四周', 近七周上课情况: 88, name: "近七周上课情况"},
+            {time: '第五周', 近七周上课情况: 90, name: "近七周上课情况"},
+            {time: '第六周', 近七周上课情况: 85, name: "近七周上课情况"},
+            {time: '第七周', 近七周上课情况: 83, name: "近七周上课情况"}
+          ]
+        }]
       }
     }
   }

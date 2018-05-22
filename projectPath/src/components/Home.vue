@@ -1,30 +1,20 @@
 <template>
   <div>
-    <Flexbox>
-      <FlexboxItem>
-        <GroupTitle>校园概况</GroupTitle>
-      </FlexboxItem>
-    </Flexbox>
+    <GroupTitle>今日情况</GroupTitle>
     <Flexbox :gutter="16" class="bgWhite">
       <FlexboxItem>
         <percent></percent>
       </FlexboxItem>
     </Flexbox>
-    <Flexbox :gutter="16">
-      <FlexboxItem>
-        <GroupTitle>签到走势</GroupTitle>
-      </FlexboxItem>
-    </Flexbox>
+    <GroupTitle>校园概况</GroupTitle>
     <Flexbox :gutter="16">
       <FlexboxItem>
         <college></college>
       </FlexboxItem>
     </Flexbox>
-    <Flexbox>
-      <FlexboxItem>
-        <GroupTitle>更多功能</GroupTitle>
-      </FlexboxItem>
-    </Flexbox>
+    <GroupTitle>系别概况</GroupTitle>
+
+    <GroupTitle>更多功能</GroupTitle>
     <Flexbox>
       <FlexboxItem>
         <Grid class="bgWhite" :cols="4" :show-lr-borders="false" :show-vertical-dividers="false">
@@ -110,10 +100,14 @@
   @import "http://at.alicdn.com/t/font_675461_g11k10ytjaq93sor.css";
 
   .iconfont {
-    font-size: 1.3em;
+    font-size: 1.8em;
   }
 
-  .bgWhite {
+  .weui-grid__label {
+    line-height: 3;
+  }
+
+  .bgWhite, .vux-flexbox-item {
     background: white;
   }
 
