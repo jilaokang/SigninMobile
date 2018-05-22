@@ -19,7 +19,7 @@
 
   html,body {
     width: 100% !important;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
   }
 
 </style>

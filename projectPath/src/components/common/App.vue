@@ -1,47 +1,22 @@
 <template>
-  <div>
-    <GroupTitle>今日情况</GroupTitle>
-    <Flexbox :gutter="16" class="bgWhite">
-      <FlexboxItem>
-        <percent></percent>
-      </FlexboxItem>
-    </Flexbox>
-    <GroupTitle>校园概况</GroupTitle>
-    <Flexbox :gutter="16">
-      <FlexboxItem>
-        <college></college>
-      </FlexboxItem>
-    </Flexbox>
-    <GroupTitle>系别概况</GroupTitle>
-
-    <GroupTitle>更多功能</GroupTitle>
-    <Flexbox>
-      <FlexboxItem>
-        <Grid class="bgWhite" :cols="4" :show-lr-borders="false" :show-vertical-dividers="false">
-          <GridItem :label="i.label" v-for="i in GetPremisson" :key="i.length">
-            <font :color="i.color" slot="icon" class="iconfont" :class="i.icon"></font>
-          </GridItem>
-        </Grid>
-      </FlexboxItem>
-    </Flexbox>
-    <Divider>武汉学院-信息中心</Divider>
-  </div>
+  <Flexbox>
+    <FlexboxItem>
+      <Grid class="bgWhite" :cols="3" :show-lr-borders="false" :show-vertical-dividers="false">
+        <GridItem :label="i.label" v-for="i in GetPremisson" :key="i.length">
+          <font :color="i.color" slot="icon" class="iconfont" :class="i.icon"></font>
+        </GridItem>
+      </Grid>
+    </FlexboxItem>
+  </Flexbox>
 </template>
 
 <script>
   /* eslint-disable */
-  import {Grid, GridItem, GroupTitle, Divider, Flexbox, FlexboxItem} from 'vux'
-
-  import percent from './common/percent.vue'
-  import college from './boss/college'
+  import {Flexbox, FlexboxItem, Grid, GridItem} from 'vux'
 
   export default {
     components: {
-      Grid, GridItem,
-      GroupTitle,
-      Divider,
-      percent, Flexbox, FlexboxItem,
-      college
+      Flexbox, FlexboxItem, Grid, GridItem
     },
     data() {
       return {
@@ -96,19 +71,14 @@
     }
   }
 </script>
-<style scoped>
-  @import "http://at.alicdn.com/t/font_675461_g11k10ytjaq93sor.css";
 
+<style scoped>
   .iconfont {
     font-size: 1.8em;
   }
 
   .weui-grid__label {
     line-height: 3;
-  }
-
-  .bgWhite, .vux-flexbox-item {
-    background: white;
   }
 
   .weui-grids:before, .weui-grid:after {

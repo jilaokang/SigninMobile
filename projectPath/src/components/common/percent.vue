@@ -16,8 +16,10 @@
       </div>
     </FlexboxItem>
     <FlexboxItem>
-      <h4 :style="this.time.today>0?'color:#217B7B':'color:#9C2E3D'">今日同比：<span>{{time.today>0?'+':''}}{{time.today}}%</span></h4>
-      <h4 :style="this.time.theMonth>0?'color:#217B7B':'color:#9C2E3D'">本月同比：<span>{{time.theMonth>0?'+':''}}{{time.theMonth}}%</span></h4>
+      <h4 :style="this.time.today>0?'color:#217B7B':'color:#9C2E3D'">
+        今日同比：<span>{{time.today>0?'+':''}}{{time.today}}%</span></h4>
+      <h4 :style="this.time.theMonth>0?'color:#217B7B':'color:#9C2E3D'">本月同比：<span>{{time.theMonth>0?'+':''}}{{time.theMonth}}%</span>
+      </h4>
     </FlexboxItem>
   </Flexbox>
 </template>
@@ -28,7 +30,9 @@
 
   export default {
     components: {
-      XCircle, Flexbox, FlexboxItem
+      XCircle,
+      Flexbox,
+      FlexboxItem
     },
     data() {
       return {

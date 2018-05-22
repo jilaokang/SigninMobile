@@ -1,15 +1,19 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+/* eslint-disable */
+import index from '@/components/index'
 
-Vue.use(Router)
+import home from '../components/boss/index'
+import effect from '../components/common/App';
 
-export default new Router({
-  routes: [
+export default [{
+  path: '/',
+  component: index,
+  children: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: 'effect',
+      component: effect
+    }, {
+      path: 'home',
+      component: home
     }
   ]
-})
+}]
