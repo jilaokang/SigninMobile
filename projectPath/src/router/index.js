@@ -6,13 +6,14 @@ import effect from '../components/common/App';
 
 export default [{
   path: '/',
+  redirect:'home',
   component: index,
   children: [
     {
       path: 'effect',
       component: effect
     }, {
-      path: 'home',
+       path: 'home',
       component: home
     }
   ]

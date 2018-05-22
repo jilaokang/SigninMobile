@@ -30,7 +30,7 @@
   }
 </script>
 <style>
-  @import "http://at.alicdn.com/t/font_675461_g11k10ytjaq93sor.css";
+  @import "http://at.alicdn.com/t/font_675461_mdtf4v5lfgu2qpvi.css";
 
   .weui-grid__label {
     line-height: 3;
