@@ -1,28 +1,62 @@
 <template>
   <div>
-    <dontkonw></dontkonw>
-    <GroupTitle>更多功能</GroupTitle>
-    <Grid class="bgWhite" :cols="4" :show-lr-borders="false" :show-vertical-dividers="false">
-      <GridItem :label="i.label" v-for="i in GetPremisson" :key="i.length">
-        <font :color="i.color" slot="icon" class="iconfont" :class="i.icon"></font>
-      </GridItem>
-    </Grid>
+    <Flexbox>
+      <FlexboxItem>
+        <GroupTitle>校园概况</GroupTitle>
+      </FlexboxItem>
+    </Flexbox>
+    <Flexbox :gutter="16" class="bgWhite">
+      <FlexboxItem>
+        <percent></percent>
+      </FlexboxItem>
+    </Flexbox>
+    <Flexbox :gutter="16">
+      <FlexboxItem>
+        <GroupTitle>签到走势</GroupTitle>
+      </FlexboxItem>
+    </Flexbox>
+    <Flexbox :gutter="16">
+      <FlexboxItem>
+        <college></college>
+      </FlexboxItem>
+    </Flexbox>
+    <Flexbox>
+      <FlexboxItem>
+        <GroupTitle>系部概况</GroupTitle>
+      </FlexboxItem>
+    </Flexbox>
+    <Flexbox>
+      <FlexboxItem>
+        <GroupTitle>更多功能</GroupTitle>
+      </FlexboxItem>
+    </Flexbox>
+    <Flexbox>
+      <FlexboxItem>
+        <Grid class="bgWhite" :cols="4" :show-lr-borders="false" :show-vertical-dividers="false">
+          <GridItem :label="i.label" v-for="i in GetPremisson" :key="i.length">
+            <font :color="i.color" slot="icon" class="iconfont" :class="i.icon"></font>
+          </GridItem>
+        </Grid>
+      </FlexboxItem>
+    </Flexbox>
     <Divider>武汉学院-信息中心</Divider>
   </div>
 </template>
 
 <script>
   /* eslint-disable */
-  import {Grid, GridItem, GroupTitle,Divider} from 'vux'
+  import {Grid, GridItem, GroupTitle, Divider, Flexbox, FlexboxItem} from 'vux'
 
-  import dontkonw from './boss/dontkonw.vue'
+  import percent from './common/percent.vue'
+  import college from './boss/college'
 
   export default {
     components: {
       Grid, GridItem,
       GroupTitle,
       Divider,
-      dontkonw
+      percent, Flexbox, FlexboxItem,
+      college
     },
     data() {
       return {
@@ -53,13 +87,13 @@
           }]
         }, {
           gridList: [{
-            label: "校园分析",
-            icon: "icon-xueyuan",
-            color: "#E7475E"
-          }, {
             label: "系部分析",
             icon: "icon-huijihesuan",
             color: "#248888"
+          }, {
+            label: "校园分析",
+            icon: "icon-xueyuan",
+            color: "#E7475E"
           }]
         }]
       }
