@@ -22,11 +22,6 @@
     </Flexbox>
     <Flexbox>
       <FlexboxItem>
-        <GroupTitle>系部概况</GroupTitle>
-      </FlexboxItem>
-    </Flexbox>
-    <Flexbox>
-      <FlexboxItem>
         <GroupTitle>更多功能</GroupTitle>
       </FlexboxItem>
     </Flexbox>
@@ -67,7 +62,7 @@
             icon: "icon-renqun",
             color: "#248888"
           }, {
-            label: "缺课学生报表",
+            label: "缺课学生表",
             icon: "icon-bug",
             color: "#E7475E"
           }]
@@ -81,7 +76,7 @@
             icon: "icon-custom-teacher",
             color: "#E7475E"
           }, {
-            label: "课程分析分析",
+            label: "课程分析",
             icon: "icon-xinrenkecheng",
             color: "#248888"
           }]

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Swiper>
+    <Swiper height="300px" style="width:85%;margin:0 auto;" dots-position="center">
       <SwiperItem>
         <v-chart :data="data">
-          <v-scale x type="timeCat" mask="MM/DD" :tick-count="3"/>
-          <v-scale y :min="0" alias="日均温度" :tick-count="5"/>
+          <v-scale x  :tick-count="7"/>
+          <v-scale y :min="70" :max="90" alias="签到情况" :tick-count="10"/>
           <v-point
             :style="{
           stroke: '#fff',
@@ -16,8 +16,8 @@
       </SwiperItem>
       <SwiperItem>
         <v-chart :data="data">
-          <v-scale x type="timeCat" mask="MM/DD" :tick-count="3"/>
-          <v-scale y :min="0" alias="日均温度" :tick-count="5"/>
+          <v-scale x :tick-count="7"/>
+          <v-scale y :min="70" :max="90" alias="签到情况" :tick-count="10"/>
           <v-point
             :style="{
           stroke: '#fff',
@@ -46,15 +46,13 @@
     data() {
       return {
         data: [
-          {time: '2016-08-08 00:00:00', tem: 10},
-          {time: '2016-08-08 00:10:00', tem: 22},
-          {time: '2016-08-08 00:30:00', tem: 20},
-          {time: '2016-08-09 00:35:00', tem: 26},
-          {time: '2016-08-09 01:00:00', tem: 20},
-          {time: '2016-08-09 01:20:00', tem: 26},
-          {time: '2016-08-10 01:40:00', tem: 28},
-          {time: '2016-08-10 02:00:00', tem: 20},
-          {time: '2016-08-10 02:20:00', tem: 18}
+          {time: '周一', tem: 75},
+          {time: '周二', tem: 78},
+          {time: '周三', tem: 85},
+          {time: '周四', tem: 89},
+          {time: '周五', tem: 90},
+          {time: '周六', tem: 85},
+          {time: '周末', tem: 83}
         ]
       }
     }
@@ -62,8 +60,13 @@
 </script>
 
 <style lang='css'>
-  .v-chart{
+  .v-chart {
     height: 100%;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: 260px !important;
   }
 </style>
 
