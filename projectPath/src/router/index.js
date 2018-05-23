@@ -4,7 +4,7 @@ import index from '@/components/index'
 import home from '../components/boss/index'
 import effect from '../components/common/appList';
 
-import classDetail from '../components/effects/classdetail'
+import classDetail from '../components/effects/studentinfo'
 
 import err404 from '../components/err/404'
 
