@@ -17,9 +17,14 @@
     background-color: #fbf9fe;
   }
 
-  html,body {
+  html, body {
     width: 100% !important;
     overflow-x: hidden !important;
+  }
+
+  .weui-bar__item_on .weui-tabbar__icon,
+  .weui-bar__item_on .weui-tabbar__label {
+    color: dodgerblue !important;
   }
 
 </style>
