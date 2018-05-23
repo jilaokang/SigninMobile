@@ -5,7 +5,7 @@ const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const vuxLoader = require('vux-loader')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -30,28 +30,18 @@ let webpackConfig = {
   },
   module: {
     rules: [
-      ...(config.dev.useEslint? [{
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter'),
-          emitWarning: !config.dev.showEslintErrorsInOverlay
-        }
-      }] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
-      },{
+      }, {
 
         test: /\.js$/,
 
         loader: 'babel-loader',
 
         include: [resolve('src'),
-          resolve('test'),resolve('node_modules/resize-detector/esm')]
+          resolve('test'), resolve('node_modules/resize-detector/esm')]
 
       },
       {
@@ -95,7 +85,7 @@ module.exports = vuxLoader.merge(webpackConfig, {
     {
       name: 'duplicate-style',
       options: {
-        cssProcessorOptions : {
+        cssProcessorOptions: {
           safe: true,
           zindex: false,
           autoprefixer: {

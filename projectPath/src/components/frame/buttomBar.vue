@@ -2,14 +2,13 @@
   <div class="flexBottom">
     <tabbar>
       <tabbar-item link="/home">
-        <font slot="icon"  class="icon-home iconfont"></font>
+        <font slot="icon" class="icon-home iconfont"></font>
         <span slot="label">
-
             首页
         </span>
       </tabbar-item>
       <tabbar-item link="/effect">
-        <font slot="icon"  class="icon-more-function iconfont"></font>
+        <font slot="icon" class="icon-more-function iconfont"></font>
         <span slot="label">
             功能
         </span>
@@ -35,7 +34,7 @@
     bottom: 0;
   }
 
-  .iconfont{
+  .iconfont {
     font-size: 20px !important;
   }
 </style>

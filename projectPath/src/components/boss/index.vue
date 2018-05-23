@@ -27,12 +27,20 @@
 
   export default {
     components: {
-      Grid, GridItem,
+      Grid,
+      GridItem,
       GroupTitle,
       Divider,
-      percent, Flexbox, FlexboxItem,
+      percent,
+      Flexbox,
+      FlexboxItem,
       swiperCollege,
       swiperDepartment
+    },
+    methods: {
+      dd(){
+        this.$store.commit('unshowBack');
+      }
     }
   }
 </script>

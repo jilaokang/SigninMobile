@@ -13,6 +13,9 @@ import ECharts from 'vue-echarts/components/ECharts.vue'
 // 手动引入 ECharts 各模块来减小打包体积
 import 'echarts/lib/chart/bar'
 import 'echarts/lib/component/tooltip'
+
+import store from './store/index'
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -29,5 +32,6 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app-box')

@@ -1,31 +1,31 @@
 <template>
   <div>
-    <x-header class="flexTop" title="签到系统" :left-options="{showBack: false}"></x-header>
+    <headerBar></headerBar>
     <div class="marginContent">
       <!-- 老板们的全功能板块 -->
       <router-view></router-view>
     </div>
-    <!-- 全英雄选择 -->
+    <!--底部菜单-->
     <buttomBar></buttomBar>
   </div>
 </template>
 
 <script>
   /* eslint-disable */
-  import {GroupTitle, XHeader} from 'vux'
+  import {GroupTitle} from 'vux'
   import college from './boss/index'
+  import footerApp from './common/appList'
+
   import buttomBar from './frame/buttomBar'
-
-  import footerApp from './common/App'
-
+  import headerBar from './frame/headerBar'
 
   export default {
     components: {
       GroupTitle,
       footerApp,
       college,
-      XHeader,
-      buttomBar
+      buttomBar,
+      headerBar
     }
   }
 </script>

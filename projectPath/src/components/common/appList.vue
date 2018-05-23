@@ -2,7 +2,7 @@
   <Flexbox>
     <FlexboxItem>
       <Grid class="bgWhite" :cols="3" :show-lr-borders="false" :show-vertical-dividers="false">
-        <GridItem :label="i.label" v-for="i in GetPremisson" :key="i.length">
+        <GridItem :label="i.label" v-for="i in GetPremisson" :key="i.length" :link="i.url">
           <font :color="i.color" slot="icon" class="iconfont" :class="i.icon"></font>
         </GridItem>
       </Grid>
@@ -16,7 +16,10 @@
 
   export default {
     components: {
-      Flexbox, FlexboxItem, Grid, GridItem
+      Flexbox,
+      FlexboxItem,
+      Grid,
+      GridItem
     },
     data() {
       return {
@@ -25,35 +28,42 @@
           gridList: [{
             label: "到课率详表",
             icon: "icon-renqun",
-            color: "#248888"
+            color: "#248888",
+            url: "/classdetail"
           }, {
             label: "缺课学生表",
             icon: "icon-bug",
-            color: "#E7475E"
+            color: "#E7475E",
+            url: "/classdetail"
           }]
         }, {
           gridList: [{
             label: "辅导员分析",
             icon: "icon-gerenxinxiyebanzhurenlaoshi",
-            color: "#248888"
+            color: "#248888",
+            url: "/classdetail"
           }, {
             label: "教师分析",
             icon: "icon-custom-teacher",
-            color: "#E7475E"
+            color: "#E7475E",
+            url: "/effect/class"
           }, {
             label: "课程分析",
             icon: "icon-xinrenkecheng",
-            color: "#248888"
+            color: "#248888",
+            url: "/effect/class"
           }]
         }, {
           gridList: [{
             label: "系部分析",
             icon: "icon-huijihesuan",
-            color: "#248888"
+            color: "#248888",
+            url: "/effect/class"
           }, {
             label: "校园分析",
             icon: "icon-xueyuan",
-            color: "#E7475E"
+            color: "#E7475E",
+            url: "/effect/class"
           }]
         }]
       }
