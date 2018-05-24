@@ -1,19 +1,17 @@
 <template>
   <div>
     <Flexbox>
-      <FlexboxItem>
-        <group label-width="5em">
-          <Datetime format="MM-DD" v-model="date"></Datetime>
-        </group>
+      <FlexboxItem id="topTime">
+        <datetime format="MM月DD日" v-model="time" @on-confirm="changeTime">{{time}}</datetime>
       </FlexboxItem>
     </Flexbox>
-    <Flexbox class="bgWhite" gutter="0">
-      <FlexboxItem v-for="n in week">
+    <Flexbox>
+      <FlexboxItem v-for="n in list.week">
         <div class="week">{{n}}</div>
       </FlexboxItem>
     </Flexbox>
-    <Flexbox class="bgWhite" gutter="0">
-      <FlexboxItem v-for="y in day">
+    <Flexbox>
+      <FlexboxItem v-for="y in list.day">
         <div class="week day">{{y}}</div>
       </FlexboxItem>
     </Flexbox>
@@ -22,29 +20,48 @@
 </template>
 
 <script>
-  import {Datetime, Group, Flexbox, FlexboxItem} from 'vux'
+  import {Datetime, Group, Flexbox, FlexboxItem, XButton} from 'vux'
   import classCard from './classCard'
 
   export default {
     components: {
-      Datetime, Group, Flexbox, FlexboxItem,classCard
+      Datetime, Group, Flexbox, FlexboxItem, classCard, XButton
     },
     data() {
       return {
-        week: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
-        day:[15, 16, 17, 18, 19, 20, 21]
+        list: {
+          week: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+          day: [15, 16, 17, 18, 19, 20, 21]
+        },
+
       }
     },
     computed: {
-      date() {
+      time(){
         let now = new Date()
-        return `${now.getMonth()}-${now.getDate()}`
+        return `${now.getMonth()+1}月${now.getDate()}日`
+      }
+    },
+    methods: {
+      changeTime(value) {
+        this.time = value
       }
     }
   }
 </script>
 
 <style scoped>
+  #topTime {
+    background: dodgerblue;
+    color: white !important;
+    text-align: center;
+    line-height: 2.5;
+  }
+
+  .vux-datetime {
+    color: white;
+  }
+
   .vux-datetime-value {
     text-align: center !important;
   }
@@ -57,19 +74,20 @@
     text-align: center;
     margin: 0 auto;
     line-height: 2;
-    justify-content:center;
+    justify-content: center;
   }
 
-  .day{
+  .day {
     width: 32px;
     border-radius: 50%;
   }
-  .day:hover{
+
+  .day:hover {
     background: blue;
     color: white;
   }
 
-  .bgWhite{
+  .bgWhite {
     padding: 10px 0 10px 0;
     justify-content: center !important;
   }

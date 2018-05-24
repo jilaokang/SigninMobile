@@ -54,7 +54,7 @@
 
 
   .marginContent {
-    margin-top: 56px;
+    margin-top: 46px;
     margin-bottom: 80px;
   }
 </style>
