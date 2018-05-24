@@ -36,8 +36,8 @@
     line-height: 3;
   }
 
-  .bgWhite, .vux-flexbox-item {
-    background: white !important;
+  .vux-flexbox{
+    background: white;
   }
 
   .weui-grids:before, .weui-grid:after {
