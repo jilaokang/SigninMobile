@@ -6,6 +6,9 @@ import effect from '../components/common/appList';
 
 import classDetail from '../components/effects/student/studentinfo'
 
+import classStudent from '../components/effects/student/classStudent'
+import classTeacher from '../components/effects/student/classTeacher'
+
 import err404 from '../components/err/404'
 
 export default [{
@@ -21,7 +24,14 @@ export default [{
       component: home
     },{
       path:"classdetail",
-      component:classDetail
+      component:classDetail,
+      children:[{
+        path:'student',
+        component:classStudent
+      },{
+        path:'teacher',
+        component:classTeacher
+      }]
     }
   ]
 }, {

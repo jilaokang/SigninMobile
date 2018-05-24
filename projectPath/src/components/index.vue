@@ -1,7 +1,8 @@
 <template>
   <div>
     <headerBar></headerBar>
-    <div class="marginContent">
+    <!--todo-->
+    <div>
       <!-- 老板们的全功能板块 -->
       <router-view></router-view>
     </div>
@@ -30,7 +31,7 @@
   }
 </script>
 <style>
-  @import "http://at.alicdn.com/t/font_675461_mdtf4v5lfgu2qpvi.css";
+  @import "http://at.alicdn.com/t/font_675461_awg8b6d5y6dvaemi.css";
 
   .weui-grid__label {
     line-height: 3;
@@ -54,7 +55,7 @@
 
 
   .marginContent {
-    margin-top: 46px;
+    margin-top: 48px;
     margin-bottom: 80px;
   }
 </style>

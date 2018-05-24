@@ -35,6 +35,16 @@
             icon: "icon-bug",
             color: "#E7475E",
             url: "/classdetail"
+          },{
+            label:'课程信息',
+            icon:'icon-kechengbiao',
+            color:'#248888',
+            url: "/classdetail/student"
+          },{
+            label:'签到修改',
+            icon:'icon-xiugai',
+            color:'#E7475E',
+            url: "/classdetail/teacher"
           }]
         }, {
           gridList: [{
