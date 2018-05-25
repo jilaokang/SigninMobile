@@ -1,19 +1,18 @@
 <template>
   <div style="margin-bottom: 15px">
     <Flexbox id="topTime" justify-content="center" align-items="center">
-      <FlexboxItem :span="1/8">
-        <x-icon type="ios-arrow-back" size="24" class="icon" @click="geniusWeek(-7)"></x-icon>
+      <FlexboxItem :span="1/6">
+        <x-icon type="ios-arrow-back" size="28" class="icon" @click="syncNowDate(-7)"></x-icon>
       </FlexboxItem>
       <FlexboxItem>
-        <datetime format="MM-DD" v-model="nowTime" @on-confirm="changeTime">
+        <datetime format="MM-DD" v-model="nowTime" @on-confirm="parseTime" style="text-align: center">
           <h4>{{nowTime}}</h4>
         </datetime>
       </FlexboxItem>
-      <FlexboxItem :span="1/8">
-        <x-icon type="ios-arrow-forward" size="24" class="icon" @click="geniusWeek(7)"></x-icon>
+      <FlexboxItem :span="1/6">
+        <x-icon type="ios-arrow-forward" size="28" class="icon" @click="syncNowDate(7)"></x-icon>
       </FlexboxItem>
     </Flexbox>
-
     <div style="padding: 10px;background: white">
       <Flexbox>
         <FlexboxItem v-for="n of list.week" :key="n">
@@ -22,8 +21,8 @@
       </Flexbox>
       <Flexbox>
         <FlexboxItem v-for="(y,index) of this.nowDay" :key="y">
-          <div class="week" :style="nowDate.getDate() == y?'border-bottom: 3px solid dodgerblue;color:dodgerblue':''">
-            <div @click="getDay(index)">
+          <div class="week" style="line-height: 2.5" :style="nowDate.getDate() == y?'border-bottom: 3px solid #407cb8;color:#407cb8':''">
+            <div @click="updateNowDate(index)">
               {{y}}
             </div>
           </div>
@@ -81,26 +80,25 @@
       }
     },
     methods: {
-      changeTime(value) {
+      parseTime(value) {
         // 可接受数组和Date()对象
         let nowDate = this.nowDate;
-
-        if (typeof(value) === 'string') {
+        if (typeof (value) === 'string') {
           this.nowTime = `${value.split("-")[0]}月${value.split("-")[1]}日`;
           nowDate = new Date(`${Date().getFullYear()}-${value}`)
         } else if (typeof (value) === 'object') {
           this.nowTime = `${value.getMonth()}月${value.getDate()}日`
-        }
+        } else throw error()
       },
-      geniusWeek(changeDay) {
+      syncNowDate(changeDay) {
         // changeDay为正负
-        const aDay = this.aDay
+        const aDay = this.aDay;
         this.nowDate = new Date(this.nowDate.getTime() + aDay * changeDay);
-        this.changeTime(this.nowDate);
+        this.parseTime(this.nowDate);
       },
-      getDay(value) {
+      updateNowDate(value) {
         let changeDay = value - this.nowDate.getDay();
-        this.geniusWeek(changeDay)
+        this.syncNowDate(changeDay)
       }
     }
   }
@@ -108,13 +106,15 @@
 
 <style scoped>
   #topTime {
-    background: dodgerblue;
+    background: #1b344d;
     color: white !important;
     text-align: center;
-    padding: 8px 6px;
+    padding: 10px 0;
     line-height: 100%;
   }
-
+  .vux-flexbox{
+    text-align: center;
+  }
   .vux-datetime {
     color: white;
   }
@@ -139,11 +139,6 @@
     font-size: 1em;
     font-weight: 300;
     border-radius: 50%;
-  }
-
-  .dayactive {
-    background: dodgerblue;
-    color: white;
   }
 
   .icon {

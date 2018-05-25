@@ -69,21 +69,21 @@
     font-weight: 800;
     background: #e9e9e9;
     color: #9fa1b6;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
     justify-content: center;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 12px;
   }
 
   .bgGreen {
-    background: #4ad44a !important;
+    background: #41ba41 !important;
     color: white !important;
   }
 
   .bgRed{
-    background: #d44a4a;
+    background: #ba4141;
     color: white;
   }
 </style>
