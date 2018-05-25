@@ -23,7 +23,7 @@
 
 <script>
   /* eslint-disable */
-  import {VChart, VLine, VPoint, VScale, VTooltip, Swiper, SwiperItem, VBar,} from 'vux'
+  import {VChart, VLine, VPoint, VScale, VTooltip, Swiper, SwiperItem, VBar} from 'vux'
 
   export default {
     components: {

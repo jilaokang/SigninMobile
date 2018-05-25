@@ -1,28 +1,34 @@
 <template>
   <div style="margin-bottom: 15px">
-    <Flexbox>
-      <FlexboxItem id="topTime">
-        <datetime format="MM-DD" v-model="time" @on-confirm="changeTime">
-          <h4>{{time}}</h4>
+    <Flexbox id="topTime" justify-content="center" align-items="center">
+      <FlexboxItem :span="1/8">
+        <x-icon type="ios-arrow-back" size="24" class="icon" @click="geniusWeek(-7)"></x-icon>
+      </FlexboxItem>
+      <FlexboxItem>
+        <datetime format="MM-DD" v-model="nowTime" @on-confirm="changeTime">
+          <h4>{{nowTime}}</h4>
         </datetime>
       </FlexboxItem>
+      <FlexboxItem :span="1/8">
+        <x-icon type="ios-arrow-forward" size="24" class="icon" @click="geniusWeek(7)"></x-icon>
+      </FlexboxItem>
     </Flexbox>
+
     <div style="padding: 10px;background: white">
       <Flexbox>
         <FlexboxItem v-for="n of list.week" :key="n">
           <div class="week">{{n}}</div>
         </FlexboxItem>
       </Flexbox>
-      <!--<Flexbox>-->
-      <!--<FlexboxItem v-for="y of this.nowDay" :key="y">-->
-      <!--<div>-->
-      <!--<div class="weekBlock">-->
-      <!--{{y}}-->
-      <!--</div>-->
-      <!--</div>-->
-      <!--</FlexboxItem>-->
-      <!--</Flexbox>-->
-      {{this.nowDay}}
+      <Flexbox>
+        <FlexboxItem v-for="(y,index) of this.nowDay" :key="y">
+          <div class="week" :style="nowDate.getDate() == y?'border-bottom: 3px solid dodgerblue;color:dodgerblue':''">
+            <div @click="getDay(index)">
+              {{y}}
+            </div>
+          </div>
+        </FlexboxItem>
+      </Flexbox>
     </div>
   </div>
 </template>
@@ -40,83 +46,61 @@
           week: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
           day: [15, 16, 17, 18, 19, 20, 21]
         },
-        time: '',
+        nowTime: '',
         nowDate: {}
       }
     },
     created() {
-      let now = new Date()
-
-      this.now = now.getDate()
+      this.nowDate = new Date()
 
       // 获取格式化后的时间
-      this.time = `${now.getMonth() + 1}月${now.getDate()}日`
-      // 获取当前日期对象
-      this.nowDate = {
-        day: now.getDay(),
-        date: now.getDate(),
-        dateObj: now
-      }
+      this.nowTime = `${this.nowDate.getMonth() + 1}月${this.nowDate.getDate()}日`
     },
     computed: {
-      //push一个日期列表
+      // push一个日期列表
+      aDay() {
+        return 24 * 60 * 60 * 1000
+      },
       nowDay() {
-        const a = this.nowDate;
         let now = this.nowDate;
         let day = [];
-
-        let count = 0;
-
-        for (let i = now.day; i => 0; i--) {
-          now.dateObj.setDate(now.dateObj.getDate() + (now.day - i))
-          day[i] = now.dateObj.getDate()
-          console.log(day[i])
+        const aDay = this.aDay
+        // 获取到星期戳之前的Date
+        for (let i = now.getDay(); i => 0; i--) {
+          day[i] = new Date(now.getTime() - (now.getDay() - i) * aDay).getDate()
           if (i === 0) {
-            this.nowDate = a;
             break
           }
         }
+        // 获取到星期戳之后的Date
+        for (let i = now.getDay() + 1; i < 7; i++) {
+          day[i] = new Date(now.getTime() + (i - now.getDay()) * aDay).getDate()
+        }
 
-        // for (let i = now.day; i < 7; i++) {
-        //   now.dateObj.setDate(now.dateObj.getDate() + (i - now.day))
-        //   day[i] = now.dateObj.date
-        //   if (i === 8) {
-        //     this.nowDate=a;
-        //     break
-        //   }
-        // }
         return day
       }
-
-      // nowDay(){
-      //   function GetDateStr(AddDayCount) {
-      //     let dd = new Date();
-      //     dd.setDate(dd.getDate()+AddDayCount);//获取AddDayCount天后的日期
-      //     let y = dd.getFullYear();
-      //     let m = dd.getMonth()+1;//获取当前月份的日期
-      //     let d = dd.getDate();
-      //     return y+"-"+m+"-"+d;
-      //   }
-      //
-      //   let count =0;
-      //   for(let i = this.nowDate.day;i<0;i--){
-      //     count -=1;
-      //     GetDateStr(count)
-      //     console.log(GetDateStr(count))
-      //   }
-      //   return
-      // }
     },
     methods: {
       changeTime(value) {
-        this.time = `${value.split("-")[0]}月${value.split("-")[1]}日`
+        // 可接受数组和Date()对象
+        let nowDate = this.nowDate;
 
-        let a = new Date().getFullYear()
-        let newDate = new Date(`${a}-${value}`)
-
-        this.nowDate.day = newDate.getDay();
-        this.nowDate.date = newDate.getDate()
-        this.nowDate.dateObj = newDate
+        if (typeof(value) === 'string') {
+          this.nowTime = `${value.split("-")[0]}月${value.split("-")[1]}日`;
+          nowDate = new Date(`${Date().getFullYear()}-${value}`)
+        } else if (typeof (value) === 'object') {
+          this.nowTime = `${value.getMonth()}月${value.getDate()}日`
+        }
+      },
+      geniusWeek(changeDay) {
+        // changeDay为正负
+        const aDay = this.aDay
+        this.nowDate = new Date(this.nowDate.getTime() + aDay * changeDay);
+        this.changeTime(this.nowDate);
+      },
+      getDay(value) {
+        let changeDay = value - this.nowDate.getDay();
+        this.geniusWeek(changeDay)
       }
     }
   }
@@ -127,7 +111,8 @@
     background: dodgerblue;
     color: white !important;
     text-align: center;
-    padding: 10px 6px;
+    padding: 8px 6px;
+    line-height: 100%;
   }
 
   .vux-datetime {
@@ -140,10 +125,6 @@
 
   .weui-cell_access .weui-cell__ft::after {
     content: none !important;
-  }
-
-  .weekBlock {
-    padding: 6px 10px;
   }
 
   .week {
@@ -163,5 +144,10 @@
   .dayactive {
     background: dodgerblue;
     color: white;
+  }
+
+  .icon {
+    fill: white;
+
   }
 </style>
