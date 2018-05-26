@@ -50,11 +50,13 @@
       <file leaf-file-name="topTime.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projectPath/src/components/common/topTime.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+            <state relative-caret-position="495">
+              <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#FlexboxItem#1;n#Flexbox#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#FlexboxItem#0;n#Flexbox#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#!!top" />
               </folding>
             </state>
@@ -64,7 +66,7 @@
       <file leaf-file-name="classStudent.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectPath/src/components/effects/student/classStudent.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="1494">
               <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -76,7 +78,7 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectPath/src/components/boss/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="414">
               <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
@@ -136,6 +138,7 @@
       <find>h3</find>
       <find>nowDate</find>
       <find>nowDay</find>
+      <find>parseTime</find>
     </findStrings>
     <replaceStrings>
       <replace>time</replace>
@@ -381,18 +384,20 @@
       <workItem from="1527077149632" duration="5015000" />
       <workItem from="1527160582211" duration="5773000" />
       <workItem from="1527169816128" duration="126000" />
-      <workItem from="1527183086110" duration="7536000" />
+      <workItem from="1527183086110" duration="7906000" />
+      <workItem from="1527338456203" duration="192000" />
+      <workItem from="1527340900699" duration="380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37064000" />
+    <option name="totallyTimeSpent" value="38006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21618743" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21618743" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -400,7 +405,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Mongo Explorer" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.14527363" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.14527363" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -529,9 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-633">
           <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
-          <folding>
-            <element signature="n#style#0;n#Swiper#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -546,9 +548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
           <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-          <folding>
-            <element signature="e#228#258#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,10 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#21#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -627,7 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectPath/src/components/effects/student/classStudent.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="1494">
           <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -637,18 +632,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectPath/src/components/boss/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="414">
           <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projectPath/src/components/common/topTime.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+        <state relative-caret-position="495">
+          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#FlexboxItem#1;n#Flexbox#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#FlexboxItem#0;n#Flexbox#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#!!top" />
           </folding>
         </state>

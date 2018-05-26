@@ -4,8 +4,8 @@
       <FlexboxItem :span="1/6">
         <x-icon type="ios-arrow-back" size="28" class="icon" @click="syncNowDate(-7)"></x-icon>
       </FlexboxItem>
-      <FlexboxItem>
-        <datetime format="MM-DD" v-model="nowTime" @on-confirm="parseTime" style="text-align: center">
+      <FlexboxItem style="text-align: center">
+        <datetime format="MM-DD" v-model="nowTime" @on-confirm="parseTime">
           <h4>{{nowTime}}</h4>
         </datetime>
       </FlexboxItem>
@@ -75,17 +75,15 @@
         for (let i = now.getDay() + 1; i < 7; i++) {
           day[i] = new Date(now.getTime() + (i - now.getDay()) * aDay).getDate()
         }
-
         return day
       }
     },
     methods: {
       parseTime(value) {
         // 可接受数组和Date()对象
-        let nowDate = this.nowDate;
         if (typeof (value) === 'string') {
           this.nowTime = `${value.split("-")[0]}月${value.split("-")[1]}日`;
-          nowDate = new Date(`${Date().getFullYear()}-${value}`)
+          this.nowDate = new Date(`${this.nowDate.getFullYear()}-${value}`)
         } else if (typeof (value) === 'object') {
           this.nowTime = `${value.getMonth()}月${value.getDate()}日`
         } else throw error()
