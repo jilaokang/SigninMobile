@@ -2,7 +2,7 @@
   <div>
     <headerBar></headerBar>
     <!--todo-->
-    <div>
+    <div class="marginContent">
       <!-- 老板们的全功能板块 -->
       <router-view></router-view>
     </div>
@@ -37,7 +37,7 @@
     line-height: 3;
   }
 
-  .vux-flexbox{
+  .vux-flexbox {
     background: white;
   }
 
@@ -53,10 +53,17 @@
     z-index: 999;
   }
 
-
   .marginContent {
-    margin-top: 48px;
+
     margin-bottom: 80px;
+  }
+
+  .card {
+    padding: 0 15px
+  }
+
+  .font-color__black{
+    color: #333333;
   }
 </style>
 

@@ -1,6 +1,6 @@
 <template>
   <div style="margin-bottom: 15px">
-    <Flexbox id="topTime" justify-content="center" align-items="center">
+    <Flexbox id="topTime">
       <FlexboxItem :span="1/6">
         <x-icon type="ios-arrow-back" size="28" class="icon" @click="syncNowDate(-7)"></x-icon>
       </FlexboxItem>
@@ -21,7 +21,8 @@
       </Flexbox>
       <Flexbox>
         <FlexboxItem v-for="(y,index) of this.nowDay" :key="y">
-          <div class="week" style="line-height: 2.5" :style="nowDate.getDate() == y?'border-bottom: 3px solid #407cb8;color:#407cb8':''">
+          <div class="week" style="line-height: 2.5"
+               :style="nowDate.getDate() == y?'border-bottom: 3px solid #407cb8;color:#407cb8':''">
             <div @click="updateNowDate(index)">
               {{y}}
             </div>
@@ -104,17 +105,20 @@
 
 <style scoped>
   #topTime {
-    background: #1b344d;
-    color: white !important;
+    background: #333333;
+    color: #333333;
     text-align: center;
     padding: 10px 0;
     line-height: 100%;
   }
-  .vux-flexbox{
+
+  .vux-flexbox {
     text-align: center;
   }
+
   .vux-datetime {
     color: white;
+    display: block;
   }
 
   .vux-datetime-value {
