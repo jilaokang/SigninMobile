@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <Flexbox class="classCard" v-for="(list,index) of classList" :class="cardBg(index)">
+    <Flexbox class="classCard" v-for="(list,index) of classList" :class="cardBg(index)" :key='index'>
       <FlexboxItem :span="1/6">
         <p>{{list.time}}</p>
       </FlexboxItem>
