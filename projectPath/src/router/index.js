@@ -7,7 +7,10 @@ import effect from '../components/common/appList';
 import classDetail from '../components/effects/student/studentinfo'
 
 import classStudent from '../components/effects/student/classStudent'
-import classTeacher from '../components/effects/student/classTeacher'
+import classTeacher from '../components/effects/teacher/classTeacher'
+import signoutDetail from '../components/effects/instructor/signoutDetail'
+
+import director from '../components/effects/director/instructor'
 
 import err404 from '../components/err/404'
 
@@ -22,16 +25,22 @@ export default [{
     }, {
       path: 'home',
       component: home
-    },{
-      path:"classdetail",
-      component:classDetail,
-      children:[{
-        path:'student',
-        component:classStudent
-      },{
-        path:'teacher',
-        component:classTeacher
+    }, {
+      path: "classdetail",
+      component: classDetail,
+      children: [{
+        path: 'student',
+        component: classStudent
+      }, {
+        path: 'teacher',
+        component: classTeacher
+      }, {
+        path: 'instructor',
+        component: signoutDetail
       }]
+    }, {
+      path: 'director',
+      component: director
     }
   ]
 }, {

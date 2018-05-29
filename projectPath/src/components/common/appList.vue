@@ -32,29 +32,29 @@
             url: "/classdetail"
           }, {
             label: "缺课学生表",
-            icon: "icon-bug",
+            icon: "icon-error",
             color: "#fed95c",
-            url: "/classdetail"
-          },{
-            label:'课程信息',
-            icon:'icon-kechengbiao',
-            color:'#fa6e57',
+            url: "/classdetail/instructor"
+          }, {
+            label: '课程信息',
+            icon: 'icon-kechengbiao',
+            color: '#fa6e57',
             url: "/classdetail/student"
-          },{
-            label:'签到修改',
-            icon:'icon-xiugai',
-            color:'#7ebc59',
+          }, {
+            label: '签到修改',
+            icon: 'icon-xiugai',
+            color: '#7ebc59',
             url: "/classdetail/teacher"
           }]
         }, {
           gridList: [{
             label: "辅导员分析",
-            icon: "icon-gerenxinxiyebanzhurenlaoshi",
+            icon: "icon-person",
             color: "#4695d6",
-            url: "/classdetail"
+            url: "/director"
           }, {
             label: "教师分析",
-            icon: "icon-custom-teacher",
+            icon: "icon-jiaolian1",
             color: "#fed95c",
             url: "/effect/class"
           }, {
@@ -71,7 +71,7 @@
             url: "/effect/class"
           }, {
             label: "校园分析",
-            icon: "icon-xueyuan",
+            icon: "icon-qiye",
             color: "#4695d6",
             url: "/effect/class"
           }]

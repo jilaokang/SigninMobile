@@ -32,7 +32,7 @@
 </script>
 <style>
   @import "../scss/main.css";
-  @import "http://at.alicdn.com/t/font_675461_awg8b6d5y6dvaemi.css";
+  @import "http://at.alicdn.com/t/font_675461_2x7sbu9j2zw7b9.css";
 
   .flexTop {
     position: fixed !important;

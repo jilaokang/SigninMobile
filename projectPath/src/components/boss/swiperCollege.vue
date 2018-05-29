@@ -5,7 +5,7 @@
         <v-chart :data="swiperlist[0].data">
           <v-scale x :tick-count="7"/>
           <v-scale y :min="70" :max="90" :tick-count="10"/>
-          <v-point series-field="name" :style="{stroke: '#fff',lineWidth: 1}" shape="smooth"/>
+          <v-point :style="{stroke: '#fff',lineWidth: 1}" shape="smooth"/>
           <v-line shape="smooth"/>
         </v-chart>
       </SwiperItem>
@@ -13,7 +13,7 @@
         <v-chart :data="swiperlist[1].data">
           <v-scale x :tick-count="7"/>
           <v-scale y :min="70" :max="90" :tick-count="10"/>
-          <v-point series-field="name" :style="{stroke: '#fff',lineWidth: 1}" shape="smooth"/>
+          <v-point :style="{stroke: '#fff',lineWidth: 1}" shape="smooth"/>
           <v-line shape="smooth"/>
         </v-chart>
       </SwiperItem>
@@ -37,23 +37,23 @@
       return {
         swiperlist: [{
           data: [
-            {time: '周一', 上周全校上课情况: 75, name: "上周全校上课情况"},
-            {time: '周二', 上周全校上课情况: 78, name: "上周全校上课情况"},
-            {time: '周三', 上周全校上课情况: 85, name: "上周全校上课情况"},
-            {time: '周四', 上周全校上课情况: 89, name: "上周全校上课情况"},
-            {time: '周五', 上周全校上课情况: 90, name: "上周全校上课情况"},
-            {time: '周六', 上周全校上课情况: 85, name: "上周全校上课情况"},
-            {time: '周末', 上周全校上课情况: 83, name: "上周全校上课情况"}
+            {time: '周一', 近七天全校到课率: 75},
+            {time: '周二', 近七天全校到课率: 78},
+            {time: '周三', 近七天全校到课率: 85},
+            {time: '周四', 近七天全校到课率: 89},
+            {time: '周五', 近七天全校到课率: 90},
+            {time: '周六', 近七天全校到课率: 85},
+            {time: '周末', 近七天全校到课率: 83}
           ]
         }, {
           data: [
-            {time: '第一周', 近七周上课情况: 93, name: "近七周上课情况"},
-            {time: '第二周', 近七周上课情况: 95, name: "近七周上课情况"},
-            {time: '第三周', 近七周上课情况: 86, name: "近七周上课情况"},
-            {time: '第四周', 近七周上课情况: 88, name: "近七周上课情况"},
-            {time: '第五周', 近七周上课情况: 90, name: "近七周上课情况"},
-            {time: '第六周', 近七周上课情况: 85, name: "近七周上课情况"},
-            {time: '第七周', 近七周上课情况: 83, name: "近七周上课情况"}
+            {time: '第一周', type: 93},
+            {time: '第二周', type: 95},
+            {time: '第三周', type: 86},
+            {time: '第四周', type: 88},
+            {time: '第五周', type: 90},
+            {time: '第六周', type: 85},
+            {time: '第七周', type: 83}
           ]
         }]
       }

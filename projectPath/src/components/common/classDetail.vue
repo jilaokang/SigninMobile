@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <Swiper height="500px" class="classCard">
-      <SwiperItem v-for="item of classList">
+      <SwiperItem v-for="item of classList" :key="item.key">
         <div>
-          <p class="title">第 {{item.time}} 节</p>
+          <p class="title">第 {{item.title}} 节</p>
         </div>
         <div class="classInfo">
           <p>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：{{item.class}}</p>
@@ -71,7 +71,7 @@
         show: false,
         classList: [{
           key: 0,
-          time: '1-3',
+          title: '1-2',
           class: '软工1501班',
           location: '中1201室',
           signin: 30,
@@ -94,7 +94,7 @@
           }]
         }, {
           key: 1,
-          time: '3-4',
+          title: '3-4',
           class: '软工1501班',
           location: '中1201室',
           signin: 30,
@@ -155,7 +155,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../../../scss/var";
+  @import "../../scss/var";
 
   .card {
     background: white;
@@ -165,7 +165,7 @@
   .classCard {
     border-radius: 5px;
     height: 100%;
-    padding: 10px;
+    padding: 10px 0;
   }
 
   .classInfo {
@@ -173,7 +173,7 @@
     font-size: 0.8em;
     padding-left: 5px;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 
   .title {
@@ -193,7 +193,7 @@
     font-size: 0.8em;
     line-height: 3;
     border: 1px solid #eee;
-    box-shadow: 0 3px 10px 0px #ccc;
+    box-shadow: 0 3px 10px 0 #eee;
     border-radius: 8px;
     padding: 18px 6px;
     border-collapse: unset;
