@@ -28,51 +28,51 @@
           gridList: [{
             label: "到课率详表",
             icon: "icon-renqun",
-            color: "#248888",
+            color: "#4695d6",
             url: "/classdetail"
           }, {
             label: "缺课学生表",
             icon: "icon-bug",
-            color: "#E7475E",
+            color: "#fed95c",
             url: "/classdetail"
           },{
             label:'课程信息',
             icon:'icon-kechengbiao',
-            color:'#248888',
+            color:'#fa6e57',
             url: "/classdetail/student"
           },{
             label:'签到修改',
             icon:'icon-xiugai',
-            color:'#E7475E',
+            color:'#7ebc59',
             url: "/classdetail/teacher"
           }]
         }, {
           gridList: [{
             label: "辅导员分析",
             icon: "icon-gerenxinxiyebanzhurenlaoshi",
-            color: "#248888",
+            color: "#4695d6",
             url: "/classdetail"
           }, {
             label: "教师分析",
             icon: "icon-custom-teacher",
-            color: "#E7475E",
+            color: "#fed95c",
             url: "/effect/class"
           }, {
             label: "课程分析",
             icon: "icon-xinrenkecheng",
-            color: "#248888",
+            color: "#fa6e57",
             url: "/effect/class"
           }]
         }, {
           gridList: [{
             label: "系部分析",
             icon: "icon-huijihesuan",
-            color: "#248888",
+            color: "#7ebc59",
             url: "/effect/class"
           }, {
             label: "校园分析",
             icon: "icon-xueyuan",
-            color: "#E7475E",
+            color: "#4695d6",
             url: "/effect/class"
           }]
         }]

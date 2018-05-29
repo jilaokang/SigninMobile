@@ -105,10 +105,10 @@
 
 <style scoped>
   #topTime {
-    background: #333333;
-    color: #333333;
+    background: #393a3f;
+    color: #393a3f;
     text-align: center;
-    padding: 10px 0;
+    padding: 6px 0;
     line-height: 100%;
   }
 

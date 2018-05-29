@@ -31,19 +31,8 @@
   }
 </script>
 <style>
+  @import "../scss/main.css";
   @import "http://at.alicdn.com/t/font_675461_awg8b6d5y6dvaemi.css";
-
-  .weui-grid__label {
-    line-height: 3;
-  }
-
-  .vux-flexbox {
-    background: white;
-  }
-
-  .weui-grids:before, .weui-grid:after {
-    border: none !important;
-  }
 
   .flexTop {
     position: fixed !important;
@@ -54,16 +43,11 @@
   }
 
   .marginContent {
-
     margin-bottom: 80px;
   }
 
   .card {
     padding: 0 15px
-  }
-
-  .font-color__black{
-    color: #333333;
   }
 </style>
 

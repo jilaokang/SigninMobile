@@ -1,29 +1,38 @@
 <template>
-  <div class="card">
-    <Flexbox class="classCard" v-for="(list,index) of classList" :class="cardBg(index)" :key='index'>
-      <FlexboxItem :span="1/6">
-        <p>{{list.time}}</p>
-      </FlexboxItem>
-      <FlexboxItem>
-        <p>{{list.classname}}</p>
-        <p>{{list.location}} {{list.teacher}}</p>
-      </FlexboxItem>
-      <FlexboxItem :span="1/4">
-        <p>{{list.success}}</p>
-      </FlexboxItem>
-    </Flexbox>
+  <div class="container">
+    <div v-for="(list,index) of classList" :key='index' @click="changError(index)">
+      <Flexbox class="classCard" :class="cardBg(index)">
+        <FlexboxItem :span="1/6">
+          <p>{{list.time}}</p>
+        </FlexboxItem>
+        <FlexboxItem>
+          <p>{{list.classname}}</p>
+          <p>{{list.location}} {{list.teacher}}</p>
+        </FlexboxItem>
+        <FlexboxItem :span="1/4">
+          <p>{{list.success}}</p>
+        </FlexboxItem>
+      </Flexbox>
+    </div>
+    <Confirm v-model="show"
+             show-input
+             title="输入反馈"
+             :input-attrs="{type: 'string'}">
+
+    </Confirm>
   </div>
 </template>
 
 <script>
-  import {Flexbox, FlexboxItem} from 'vux'
+  import {Flexbox, FlexboxItem, Confirm} from 'vux'
 
   export default {
     components: {
-      Flexbox, FlexboxItem
+      Flexbox, FlexboxItem, Confirm
     },
     data() {
       return {
+        show: false,
         classList: [{
           time: '1-2',
           classname: '计算机网络原理',
@@ -32,7 +41,7 @@
           done: true,
           signin: true,
           signout: true,
-          success:'未上课'||null
+          success: '未上课' || null
         }, {
           time: '3-4',
           classname: 'Linux操作系统',
@@ -41,7 +50,7 @@
           done: true,
           signin: false,
           signout: true,
-          success:'未上课'||null
+          success: '未上课' || null
         }, {
           time: '5-6',
           classname: 'SQL数据库设计与管理',
@@ -50,7 +59,7 @@
           done: false,
           signin: false,
           signout: true,
-          success:'未上课'||null
+          success: '未上课' || null
         }, {
           time: '7-8',
           classname: '网络通讯原理',
@@ -59,7 +68,7 @@
           done: false,
           signin: false,
           signout: true,
-          success:''
+          success: ''
         }]
       }
     },
@@ -79,17 +88,26 @@
           classList.success = '未开始'
           return ''
         }
+      },
+      changError(index) {
+        let a = this.cardBg(index)
+
+        if (a === 'bgRed') {
+          this.show = true
+        }
       }
     }
   }
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
+  @import "../../../scss/var";
+
   .classCard {
     font-size: 0.88em;
     font-weight: 800;
-    background: #e9e9e9;
-    color:#333333;
+    background: #eeeeee;
+    color: $font__black;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 10px;
@@ -99,13 +117,13 @@
   }
 
   .bgGreen {
-    background: #41ba41 !important;
-    color: white !important;
+    background: $font__green;
+    color: #fbfbfb !important;
   }
 
   .bgRed {
-    background: #ba4141;
-    color: white;
+    background: $font__red;
+    color: $font__white;
   }
 </style>
 
