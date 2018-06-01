@@ -25,7 +25,6 @@
 </template>
 
 <script>
-  /* eslint-disable */
   import {XCircle, Flexbox, FlexboxItem} from 'vux'
 
   export default {

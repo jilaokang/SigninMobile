@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <Swiper height="500px" class="classCard">
       <SwiperItem v-for="item of classList" :key="item.key">
         <div>
