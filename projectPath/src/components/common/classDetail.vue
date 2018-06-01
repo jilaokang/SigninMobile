@@ -159,19 +159,19 @@
 
   .card {
     background: white;
-    padding-top: 10px;
+    padding-top: 8px;
   }
 
   .classCard {
-    border-radius: 5px;
+    border-radius: 4px;
     height: 100%;
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   .classInfo {
-    margin: 20px 0;
+    margin: 24px 0;
     font-size: 0.8em;
-    padding-left: 5px;
+    padding-left: 8px;
     font-weight: 800;
     line-height: 1.5;
   }
@@ -179,9 +179,9 @@
   .title {
     text-align: center;
     color: dodgerblue !important;
-    font-size: 1.3em;
+    font-size: 16px;
     font-weight: 800;
-    line-height: 2;
+    line-height: 1.55;
   }
 
   .vux-swiper-item {
@@ -193,9 +193,9 @@
     font-size: 0.8em;
     line-height: 3;
     border: 1px solid #eee;
-    box-shadow: 0 3px 10px 0 #eee;
+    box-shadow: 0 3px 8px 0 #eee;
     border-radius: 8px;
-    padding: 18px 6px;
+    padding: 16px 8px;
     border-collapse: unset;
   }
 

@@ -35,6 +35,6 @@
   }
 
   .iconfont {
-    font-size: 20px !important;
+    font-size: 22px !important;
   }
 </style>

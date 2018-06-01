@@ -2,7 +2,7 @@
   <div style="margin-bottom: 15px">
     <Flexbox id="topTime">
       <FlexboxItem :span="1/6">
-        <x-icon type="ios-arrow-back" size="28" class="icon" @click="syncNowDate(-7)"></x-icon>
+        <x-icon type="ios-arrow-back" size="24" class="icon" @click="setDate(-7)"></x-icon>
       </FlexboxItem>
       <FlexboxItem style="text-align: center">
         <datetime format="MM-DD" v-model="nowTime" @on-confirm="parseTime">
@@ -10,7 +10,7 @@
         </datetime>
       </FlexboxItem>
       <FlexboxItem :span="1/6">
-        <x-icon type="ios-arrow-forward" size="28" class="icon" @click="syncNowDate(7)"></x-icon>
+        <x-icon type="ios-arrow-forward" size="24" class="icon" @click="setDate(7)"></x-icon>
       </FlexboxItem>
     </Flexbox>
     <div style="padding: 10px;background: white">
@@ -20,10 +20,10 @@
         </FlexboxItem>
       </Flexbox>
       <Flexbox>
-        <FlexboxItem v-for="(y,index) of this.nowDay" :key="y">
+        <FlexboxItem v-for="(y,index) of this.setWeek" :key="y">
           <div class="week" style="line-height: 2.5"
                :style="nowDate.getDate() == y?'border-bottom: 3px solid #407cb8;color:#407cb8':''">
-            <div @click="updateNowDate(index)">
+            <div @click="changeDate(index)">
               {{y}}
             </div>
           </div>
@@ -61,7 +61,7 @@
       aDay() {
         return 24 * 60 * 60 * 1000
       },
-      nowDay() {
+      setWeek() {
         let now = this.nowDate;
         let day = [];
         const aDay = this.aDay
@@ -89,15 +89,15 @@
           this.nowTime = `${value.getMonth()}月${value.getDate()}日`
         } else throw error()
       },
-      syncNowDate(changeDay) {
+      setDate(changeDay) {
         // changeDay为正负
         const aDay = this.aDay;
         this.nowDate = new Date(this.nowDate.getTime() + aDay * changeDay);
         this.parseTime(this.nowDate);
       },
-      updateNowDate(value) {
+      changeDate(value) {
         let changeDay = value - this.nowDate.getDay();
-        this.syncNowDate(changeDay)
+        this.setNowDate(changeDay)
       }
     }
   }
@@ -108,7 +108,7 @@
     background: #393a3f;
     color: #393a3f;
     text-align: center;
-    padding: 6px 0;
+    padding: 10px 0;
     line-height: 100%;
   }
 
