@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <div class="container">
-      <classDetail></classDetail>
-    </div>
-    <chartColumn></chartColumn>
+  <div class="container">
+    <classDetail></classDetail>
   </div>
 </template>
 
@@ -13,7 +10,7 @@
 
   export default {
     components: {
-      classDetail, chartColumn
+      classDetail
     }
   }
 </script>
