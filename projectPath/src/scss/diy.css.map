@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AACA,UAAU;EACR,UAAU,ECGC,OAAO;EDFlB,OAAO,EAAE,QAAQ",
-"sources": ["diy.scss","var.scss"],
+"mappings": "AAEA,UAAU;EACR,UAAU,EAAE,OAAO;EACnB,OAAO,EAAE,SAAS",
+"sources": ["diy.scss"],
 "names": [],
 "file": "diy.css"
 }
