@@ -97,7 +97,7 @@
       },
       changeDate(value) {
         let changeDay = value - this.nowDate.getDay();
-        this.setNowDate(changeDay)
+        this.setDate(changeDay)
       }
     }
   }
