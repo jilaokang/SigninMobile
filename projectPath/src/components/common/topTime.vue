@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-bottom: 15px">
+  <div style="margin-bottom: 16px">
     <Flexbox id="topTime">
       <FlexboxItem :span="1/6">
         <x-icon type="ios-arrow-back" size="24" class="icon" @click="setDate(-7)"></x-icon>
@@ -13,7 +13,7 @@
         <x-icon type="ios-arrow-forward" size="24" class="icon" @click="setDate(7)"></x-icon>
       </FlexboxItem>
     </Flexbox>
-    <div style="padding: 10px;background: white">
+    <div style="padding: 8px;background: #fff">
       <Flexbox>
         <FlexboxItem v-for="n of list.week" :key="n">
           <div class="week">{{n}}</div>
@@ -108,7 +108,7 @@
     background: #393a3f;
     color: #393a3f;
     text-align: center;
-    padding: 10px 0;
+    padding: 8px 0;
     line-height: 100%;
   }
 
@@ -143,6 +143,5 @@
 
   .icon {
     fill: white;
-
   }
 </style>

@@ -3,7 +3,7 @@
     <GroupTitle>今日情况</GroupTitle>
     <Flexbox :gutter="16" class="bgWhite">
       <FlexboxItem>
-        <percent></percent>
+        <percent :siginValue="siginValue"></percent>
       </FlexboxItem>
     </Flexbox>
     <GroupTitle>校园概况</GroupTitle>
@@ -36,6 +36,15 @@
       FlexboxItem,
       swiperCollege,
       swiperDepartment
+    },
+    data(){
+      return{
+        siginValue:{
+          today:83,
+          yeasterday:86,
+          lastmonth:79
+        }
+      }
     },
     methods: {
       dd(){

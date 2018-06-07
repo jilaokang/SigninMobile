@@ -8,36 +8,14 @@
   import F2 from '@antv/f2';
 
   export default {
+    props:{
+      chart:{
+        type:Object,
+        require:true
+      }
+    },
     mounted() {
-      var data = [
-        {content: "甘小武", y: 65, x: 1940},
-        {content: "甘小武", y: 67, x: 1941},
-        {content: "甘小武", y: 68, x: 1942},
-        {content: "甘小武", y: 78, x: 1943},
-        {content: "甘小武", y: 85, x: 1944},
-        {content: "甘小武", y: 75, x: 1945},
-        {content: "甘小武", y: 83, x: 1946},
-        {content: "甘小武", y: 85, x: 1947},
-        {content: "甘小武", y: 88, x: 1948},
-        {content: "甘小六", y: 98, x: 1940},
-        {content: "甘小六", y: 78, x: 1941},
-        {content: "甘小六", y: 85, x: 1942},
-        {content: "甘小六", y: 87, x: 1943},
-        {content: "甘小六", y: 86, x: 1944},
-        {content: "甘小六", y: 85, x: 1945},
-        {content: "甘小六", y: 63, x: 1946},
-        {content: "甘小六", y: 78, x: 1947},
-        {content: "甘小六", y: 89, x: 1948},
-        {content: "刘小六", y: 98-5, x: 1940},
-        {content: "刘小六", y: 78-5, x: 1941},
-        {content: "刘小六", y: 85-5, x: 1942},
-        {content: "刘小六", y: 87-5, x: 1943},
-        {content: "刘小六", y: 86-5, x: 1944},
-        {content: "刘小六", y: 85-5, x: 1945},
-        {content: "刘小六", y: 63-5, x: 1946},
-        {content: "刘小六", y: 78-5, x: 1947},
-        {content: "刘小六", y: 89-5, x: 1948},
-      ]
+      var data = this.chart.data
 
 
       function aa(data) {
