@@ -1,7 +1,7 @@
 <template>
-    <div class="chart-wrapper chart" >
-      <canvas id="mountNode"></canvas>
-    </div>
+
+      <canvas id="mountNode" class="chart"></canvas>
+
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-bottom: 16px">
+  <div style="margin-bottom: 24px">
     <Flexbox id="topTime">
       <FlexboxItem :span="1/6">
         <x-icon type="ios-arrow-back" size="24" class="icon" @click="setDate(-7)"></x-icon>

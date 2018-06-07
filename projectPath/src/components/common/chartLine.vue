@@ -1,7 +1,5 @@
 <template>
-  <div class="chart-wrapper">
     <canvas id="chartLine" class="chart"></canvas>
-  </div>
 </template>
 
 <script>

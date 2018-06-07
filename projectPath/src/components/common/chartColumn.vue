@@ -1,7 +1,5 @@
 <template>
-  <div>
     <canvas id="chartCol" class="chart"></canvas>
-  </div>
 </template>
 
 <script>
