@@ -130,7 +130,6 @@
   }
 
   .week {
-    font-size: 0.8em;
     font-weight: 800;
     text-align: center;
     margin: 0 auto;
@@ -138,7 +137,6 @@
   }
 
   .day {
-    font-size: 1em;
     font-weight: 300;
     border-radius: 50%;
   }

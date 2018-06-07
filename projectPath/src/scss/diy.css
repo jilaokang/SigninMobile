@@ -1,5 +1,19 @@
 .container {
   background: #ffffff;
-  padding: 16px 24px; }
+  padding: 16px 24px;
+  line-height: 1.55; }
+
+.chartCard {
+  background: #fff;
+  text-align: center;
+  font-weight: 800;
+  color: #4695d6;
+  margin: 16px 0;
+  padding: 16px 0; }
+
+.chart {
+  margin: 16px 0;
+  background: white;
+  padding: 16px 0; }
 
 /*# sourceMappingURL=diy.css.map */

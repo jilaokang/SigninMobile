@@ -14,7 +14,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@antv/f2": "^3.1.8",
     "fastclick": "^1.0.6",
+    "source-map": "^0.7.3",
     "vue": "^2.5.2",
     "vue-echarts": "^3.0.7",
     "vue-router": "^3.0.1",
