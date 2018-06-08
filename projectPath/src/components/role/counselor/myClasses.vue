@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import percent from '../../common/percent'
+  import percent from '../../common/chart/chartPercent'
 
   export default {
     components: {
@@ -14,6 +14,7 @@
     data() {
       return {
         siginValue:{
+          title:'我班今日签到',
           today:85,
           yeasterday:72,
           lastmonth:75

@@ -5,8 +5,8 @@
 </template>
 
 <script>
-  import classDetail from '../../common/classDetail'
-  import chartColumn from '../../common/chartColumn'
+  import classDetail from '../../common/card/classDetail'
+  import chartColumn from '../../common/chart/chartCol'
 
   export default {
     components: {

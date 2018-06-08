@@ -1,15 +1,15 @@
 <template>
-  <div style="margin-bottom: 15px">
+  <div>
     <topTime></topTime>
-   <router-view></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import topTime from '../../common/topTime'
+  import topTime from '../common/frame/headerTime'
 
   export default {
-    components:{
+    components: {
       topTime
     }
   }

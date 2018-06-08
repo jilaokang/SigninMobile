@@ -26,54 +26,54 @@
         access: 2,
         permission: [{
           gridList: [{
-            label: "到课率详表",
+            label: "班级情况",
             icon: "icon-renqun",
             color: "#4695d6",
-            url: "/classdetail"
+            url: "/role/classdetail"
           }, {
             label: "缺课学生表",
             icon: "icon-error",
             color: "#fed95c",
-            url: "/classdetail/instructor"
+            url: "/role/classdetail/counselor"
           }, {
             label: '课程信息',
             icon: 'icon-kechengbiao',
             color: '#fa6e57',
-            url: "/classdetail/student"
+            url: "/role/topTime/myCourse"
           }, {
             label: '签到修改',
             icon: 'icon-xiugai',
             color: '#7ebc59',
-            url: "/classdetail/teacher"
+            url: "/role/topTime/myStudents"
           }]
         }, {
           gridList: [{
-            label: "辅导员分析",
+            label: "辅导员情况",
             icon: "icon-person",
             color: "#4695d6",
-            url: "/director"
+            url: "/role/myCounselor"
           }, {
-            label: "教师分析",
+            label: "教师情况",
             icon: "icon-jiaolian1",
             color: "#fed95c",
-            url: "/effect/class"
+            url: "/role/"
           }, {
-            label: "课程分析",
+            label: "课程情况",
             icon: "icon-xinrenkecheng",
             color: "#fa6e57",
-            url: "/effect/class"
+            url: "/role/"
           }]
         }, {
           gridList: [{
-            label: "系部分析",
+            label: "系部情况",
             icon: "icon-huijihesuan",
             color: "#7ebc59",
-            url: "/effect/class"
+            url: "/role/effect/class"
           }, {
-            label: "校园分析",
+            label: "校园情况",
             icon: "icon-qiye",
             color: "#4695d6",
-            url: "/effect/class"
+            url: "/role/effect/class"
           }]
         }]
       }

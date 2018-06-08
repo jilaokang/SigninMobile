@@ -1,5 +1,5 @@
 <template>
-  <Flexbox id="college">
+  <Flexbox class="chart">
     <FlexboxItem>
       <div class="vux-circle-demo">
         <div style='width:100px;height:100px;'>
@@ -9,8 +9,8 @@
             :trail-width="6"
             :stroke-color="['#36D1DC', '#5B86E5']"
             trail-color="#fff">
-            <span style="color:#36D1DC">{{ siginValue.today }}%</span>
-            <p style="color: #36D1DC">今日签到</p>
+            <span style="color:#36D1DC;font-weight: 800">{{ siginValue.today }}%</span>
+            <p style="color: #36D1DC;font-size: 0.8em;font-weight: 800;">{{siginValue.title}}</p>
           </x-circle>
         </div>
       </div>
@@ -52,8 +52,4 @@
     margin: 0 auto;
   }
 
-  #college {
-    padding: 16px;
-    background: white;
-  }
 </style>

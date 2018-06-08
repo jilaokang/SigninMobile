@@ -1,5 +1,5 @@
 <template>
-  <!--<x-header class="flexTop" title="签到系统" :left-options="{showBack: false}"></x-header>-->
+  <x-header class="flexTop" title="武汉学院签到系统"></x-header>
 </template>
 
 <script>

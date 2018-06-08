@@ -22,7 +22,7 @@
             <tbody>
             <tr v-for="(student,index) of item.studentList" :key="index">
               <td>{{student.name}}</td>
-              <td  :style="student.success?'':'color:#fa6e57'">
+              <td :style="student.success?'':'color:#fa6e57'">
                 {{student.success?'成功':'失败'}}
               </td>
               <td>
@@ -182,7 +182,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../../scss/var";
+  @import "../../../scss/var";
 
   .classCard {
     height: 100%;

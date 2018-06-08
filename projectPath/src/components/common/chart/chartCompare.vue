@@ -1,6 +1,6 @@
 <template>
 
-      <canvas id="mountNode" class="chart"></canvas>
+  <canvas id="mountNode" class="chart"></canvas>
 
 </template>
 
@@ -8,18 +8,18 @@
   import F2 from '@antv/f2';
 
   export default {
-    props:{
-      chart:{
-        type:Object,
-        require:true
+    props: {
+      chart: {
+        type: Object,
+        require: true
       }
     },
     mounted() {
-      var data = this.chart.data
+      let data = this.chart.data
 
 
-      function aa(data) {
-        var chart = new F2.Chart({
+      function o_O(data) {
+        let chart = new F2.Chart({
           id: 'mountNode',
           width: window.innerWidth,
           height: window.innerWidth > window.innerHeight ? window.innerHeight - 54 : window.innerWidth * 0.707,
@@ -31,11 +31,11 @@
         });
         chart.scale('y', {
           min: 60,
-          max:100
+          max: 100
         });
         chart.axis('x', {
           label: function label(text, index, total) {
-            var textCfg = {};
+            let textCfg = {};
             if (index === 0) {
               textCfg.textAlign = 'left';
             } else if (index === total - 1) {
@@ -56,16 +56,16 @@
           showCrosshairs: true,
           custom: true, // 自定义 tooltip 内容框
           onChange: function onChange(obj) {
-            var legend = chart.get('legendController').legends.top[0];
-            var tooltipItems = obj.items;
-            var legendItems = legend.items;
-            var map = {};
+            let legend = chart.get('legendController').legends.top[0];
+            let tooltipItems = obj.items;
+            let legendItems = legend.items;
+            let map = {};
             legendItems.map(function (item) {
               map[item.name] = _.clone(item);
             });
             tooltipItems.map(function (item) {
-              var name = item.name;
-              var y = item.y;
+              let name = item.name;
+              let y = item.y;
               if (map[name]) {
                 map[name].y = y;
               }
@@ -73,7 +73,7 @@
             legend.setItems(_.values(map));
           },
           onHide: function onHide() {
-            var legend = chart.get('legendController').legends.top[0];
+            let legend = chart.get('legendController').legends.top[0];
             legend.setItems(chart.getLegendItems().content);
           }
         });
@@ -81,7 +81,8 @@
         chart.line().position('x*y').color('content').shape('smooth');
         chart.render();
       }
-      aa(data)
+
+      o_O(data)
     }
   }
 </script>

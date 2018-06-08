@@ -2,17 +2,20 @@
 import index from '@/components/index'
 
 import home from '../components/boss/index'
-import effect from '../components/common/appList';
+import AppList from '../components/common/frame/bodyAppList';
 
-import classDetail from '../components/effects/student/studentinfo'
+import topTime from '../components/frame/topTime'
 
-import classStudent from '../components/effects/student/classStudent'
-import classTeacher from '../components/effects/teacher/classTeacher'
-import signoutDetail from '../components/effects/instructor/signoutDetail'
+import bodyRole from '../components/frame/bodyRole'
 
-import director from '../components/effects/director/instructor'
+import myCourse from '../components/role/student/myCourse'
+import myStudents from '../components/role/teacher/myStudents'
+import myClasses from '../components/role/counselor/myClasses'
+
+import myCounselor from '../components/role/department/myCounselor'
 
 import err404 from '../components/err/404'
+
 
 export default [{
   path: '/',
@@ -20,27 +23,32 @@ export default [{
   component: index,
   children: [
     {
-      path: 'effect',
-      component: effect
+      path: 'app',
+      component: AppList
     }, {
       path: 'home',
       component: home
-    }, {
-      path: "classdetail",
-      component: classDetail,
+    },
+    {
+      path: 'role',
+      component: bodyRole,
       children: [{
-        path: 'student',
-        component: classStudent
+        path: "topTime",
+        component: topTime,
+        children: [{
+          path: 'myCourse',
+          component: myCourse
+        }, {
+          path: 'myStudents',
+          component: myStudents
+        }, {
+          path: 'myClasses',
+          component: myClasses
+        }]
       }, {
-        path: 'teacher',
-        component: classTeacher
-      }, {
-        path: 'instructor',
-        component: signoutDetail
+        path: 'myCounselor',
+        component: myCounselor
       }]
-    }, {
-      path: 'director',
-      component: director
     }
   ]
 }, {

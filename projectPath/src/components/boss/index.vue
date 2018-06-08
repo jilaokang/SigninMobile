@@ -21,7 +21,7 @@
   /* eslint-disable */
   import {Grid, GridItem, GroupTitle, Divider, Flexbox, FlexboxItem} from 'vux'
 
-  import percent from '../common/percent'
+  import percent from '../common/chart/chartPercent'
   import swiperCollege from './swiperCollege'
   import swiperDepartment from './swiperDepartment'
 
@@ -40,6 +40,7 @@
     data(){
       return{
         siginValue:{
+          title:'我校今日签到',
           today:83,
           yeasterday:86,
           lastmonth:79

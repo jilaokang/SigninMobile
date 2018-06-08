@@ -7,7 +7,7 @@
             首页
         </span>
       </tabbar-item>
-      <tabbar-item link="/effect">
+      <tabbar-item link="/app">
         <font slot="icon" class="icon-more-function iconfont"></font>
         <span slot="label">
             功能
@@ -30,6 +30,7 @@
 <style scoped>
   .flexBottom {
     width: 100%;
+    z-index: 999;
     position: fixed;
     bottom: 0;
   }

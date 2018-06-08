@@ -1,46 +1,27 @@
 <template>
   <div>
-    <headerBar></headerBar>
-    <!--todo-->
     <div class="marginContent">
       <!-- 老板们的全功能板块 -->
       <router-view></router-view>
     </div>
     <!--底部菜单-->
-    <buttomBar></buttomBar>
+    <footerBar></footerBar>
   </div>
 </template>
 
 <script>
-  /* eslint-disable */
-  import {GroupTitle} from 'vux'
-  import college from './boss/index'
-  import footerApp from './common/appList'
 
-  import buttomBar from './frame/buttomBar'
-  import headerBar from './frame/headerBar'
+  import footerBar from './frame/footerBar'
 
   export default {
     components: {
-      GroupTitle,
-      footerApp,
-      college,
-      buttomBar,
-      headerBar
+      footerBar
     }
   }
 </script>
 <style>
   @import "../scss/main.css";
   @import "http://at.alicdn.com/t/font_675461_2x7sbu9j2zw7b9.css";
-
-  .flexTop {
-    position: fixed !important;
-    width: 100%;
-    margin-bottom: 20px;
-    top: 0;
-    z-index: 999;
-  }
 
   .marginContent {
     margin-bottom: 80px;
