@@ -2,14 +2,15 @@
 
 @import "var";
 
-a .active{
+a .active {
   background-color: $font__blue !important;
 }
 
-.weui-grid__label{
+.weui-grid__label {
   font-weight: 800;
   color: $font__black;
 }
+
 .weui-grid__label {
   line-height: 3;
 }
@@ -18,16 +19,15 @@ a .active{
   background: $font__white;
 }
 
-
 .weui-grids:before, .weui-grid:after {
   border: none !important;
 }
 
-.weui-btn_primary,.weui-btn_primary:hover{
+.weui-btn_primary, .weui-btn_primary:hover {
   background: $font__blue;
   border: none;
 }
 
-.vux-slider{
+.vux-slider {
   margin: 16px 0;
 }
