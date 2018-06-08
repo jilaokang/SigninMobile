@@ -1,7 +1,5 @@
 <template>
-
-  <canvas id="mountNode" class="chart"></canvas>
-
+  <canvas :id="o_O" class="chart"></canvas>
 </template>
 
 <script>
@@ -14,13 +12,19 @@
         require: true
       }
     },
+    computed: {
+      // 超级无敌大随机
+      o_O() {
+        return `chart` + Math.floor(Math.random() * 10000)
+      }
+    },
     mounted() {
       let data = this.chart.data
+      let o_O = this.o_O
 
-
-      function o_O(data) {
+      function o_o(data) {
         let chart = new F2.Chart({
-          id: 'mountNode',
+          id: o_O,
           width: window.innerWidth,
           height: window.innerWidth > window.innerHeight ? window.innerHeight - 54 : window.innerWidth * 0.707,
           pixelRatio: window.devicePixelRatio
@@ -82,7 +86,7 @@
         chart.render();
       }
 
-      o_O(data)
+      o_o(data)
     }
   }
 </script>

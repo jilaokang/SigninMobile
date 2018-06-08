@@ -6,14 +6,24 @@
     <checklist :style="button?'display:block':'display:none'" title="显示范围" :options="checklist.commonList"
                v-model="checklist.checklist"></checklist>
     <percent :siginValue="siginValue"></percent>
-    <chartLine :chart="chart2"></chartLine>
+    <Swiper height="55vh">
+      <SwiperItem>
+        <chartLine :chart="chart2"></chartLine>
+      </SwiperItem>
+      <SwiperItem>
+        <chartLine :chart="chart2"></chartLine>
+      </SwiperItem>
+      <SwiperItem>
+        <chartLine :chart="chart2"></chartLine>
+      </SwiperItem>
+    </Swiper>
     <chartCol :chart="chart"></chartCol>
     <chartCompare :chart="chart3"></chartCompare>
   </div>
 </template>
 
 <script>
-  import {Checklist, XButton} from 'vux'
+  import {Checklist, XButton, Swiper, SwiperItem} from 'vux'
 
   import chartCol from '../../common/chart/chartCol';
   import chartLine from '../../common/chart/chartLine'
@@ -27,16 +37,17 @@
       chartCol,
       chartLine,
       chartCompare,
-      percent
+      percent,
+      Swiper,
+      SwiperItem
     },
     data() {
-
       return {
-        siginValue:{
-          title:'本系今日签到',
-          today:85,
-          yeasterday:72,
-          lastmonth:75
+        siginValue: {
+          title: '本系今日签到',
+          today: 85,
+          yeasterday: 72,
+          lastmonth: 75
         },
         chart2: {
           config: {
@@ -77,15 +88,15 @@
             {content: "赵老师", y: 63, x: "5/7"},
             {content: "赵老师", y: 78, x: "5/8"},
             {content: "赵老师", y: 89, x: "5/9"},
-            {content: "刘老师", y: 95-5, x: "5/1"},
-            {content: "刘老师", y: 78-5, x: "5/2"},
-            {content: "刘老师", y: 85-5, x: "5/3"},
-            {content: "刘老师", y: 87-5, x: "5/4"},
-            {content: "刘老师", y: 86-5, x: "5/5"},
-            {content: "刘老师", y: 85-5, x: "5/6"},
-            {content: "刘老师", y: 63+5, x: "5/7"},
-            {content: "刘老师", y: 78-5, x: "5/8"},
-            {content: "刘老师", y: 89-5, x: "5/9"},
+            {content: "刘老师", y: 95 - 5, x: "5/1"},
+            {content: "刘老师", y: 78 - 5, x: "5/2"},
+            {content: "刘老师", y: 85 - 5, x: "5/3"},
+            {content: "刘老师", y: 87 - 5, x: "5/4"},
+            {content: "刘老师", y: 86 - 5, x: "5/5"},
+            {content: "刘老师", y: 85 - 5, x: "5/6"},
+            {content: "刘老师", y: 63 + 5, x: "5/7"},
+            {content: "刘老师", y: 78 - 5, x: "5/8"},
+            {content: "刘老师", y: 89 - 5, x: "5/9"},
           ]
         },
         chart: {

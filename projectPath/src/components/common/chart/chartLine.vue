@@ -1,5 +1,5 @@
 <template>
-    <canvas id="chartLine" class="chart"></canvas>
+    <canvas :id="o_O" class="chart"></canvas>
 </template>
 
 <script>
@@ -12,6 +12,12 @@
         require: true
       }
     },
+    computed: {
+      // 超级无敌大随机
+      o_O() {
+        return `chart` + Math.floor(Math.random() * 10000)
+      }
+    },
     mounted() {
       const chartProps = this.chart
       const chartConfig = chartProps.config
@@ -19,7 +25,7 @@
 
 
       var chart = new F2.Chart({
-        id: 'chartLine',
+        id: this.o_O,
         width: window.innerWidth,
         height: window.innerWidth > window.innerHeight ? window.innerHeight - 54 : window.innerWidth * 0.707,
         pixelRatio: window.devicePixelRatio
