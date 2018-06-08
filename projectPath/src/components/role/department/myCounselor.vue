@@ -6,7 +6,7 @@
     <checklist :style="button?'display:block':'display:none'" title="显示范围" :options="checklist.commonList"
                v-model="checklist.checklist"></checklist>
     <percent :siginValue="siginValue"></percent>
-    <Swiper height="55vh">
+    <Swiper>
       <SwiperItem>
         <chartLine :chart="chart2"></chartLine>
       </SwiperItem>

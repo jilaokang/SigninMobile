@@ -18,13 +18,15 @@ a .active {
   background: #4695d6;
   border: none; }
 
+.vux-slider {
+  margin: 16px 0; }
+
 .container {
   background: #ffffff;
   padding: 24px 24px;
   line-height: 1.55; }
 
 .chart {
-  margin: 16px 0;
   background: white;
   padding: 16px 0; }
 
