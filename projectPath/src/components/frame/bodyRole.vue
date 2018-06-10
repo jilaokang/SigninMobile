@@ -27,6 +27,6 @@
   }
 
   .margintop20{
-    margin-top: 40px;
+    margin-top: 47px;
   }
 </style>

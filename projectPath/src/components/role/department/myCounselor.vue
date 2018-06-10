@@ -1,5 +1,6 @@
 <template>
   <div>
+    <search></search>
     <div class="container" @click="display()">
       <XButton>这是个按钮</XButton>
     </div>
@@ -29,6 +30,7 @@
   import chartLine from '../../common/chart/chartLine'
   import chartCompare from '../../common/chart/chartCompare'
   import percent from '../../common/chart/chartPercent'
+  import search from '../../common/search'
 
   export default {
     components: {
@@ -39,7 +41,8 @@
       chartCompare,
       percent,
       Swiper,
-      SwiperItem
+      SwiperItem,
+      search
     },
     data() {
       return {
