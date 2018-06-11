@@ -113,7 +113,6 @@
             {x: '李老师', y: 78},
             {x: '米老师', y: 93},
           ]
-
         },
         button: false,
         checklist: {

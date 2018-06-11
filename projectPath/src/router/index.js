@@ -1,6 +1,6 @@
 import index from '@/components/index'
 
-import home from '../components/boss/index'
+import home from '../components/home/index'
 import AppList from '../components/common/frame/bodyAppList';
 
 import topTime from '../components/frame/topTime'

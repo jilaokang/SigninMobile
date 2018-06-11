@@ -32,20 +32,7 @@ a .active {
   margin: 16px 0;
 }
 
-.weui-search-bar__cancel-btn {
+.weui-search-bar__cancel-btn{
   color: $font__blue !important;
 }
 
-body {
-  background-color: #fbf9fe;
-}
-
-html, body {
-  width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-.weui-bar__item_on .weui-tabbar__icon,
-.weui-bar__item_on .weui-tabbar__label {
-  color: dodgerblue !important;
-}
