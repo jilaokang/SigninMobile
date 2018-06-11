@@ -18,6 +18,8 @@
     <Flexbox>
       <FlexboxItem>
         <chartCol :chart="chart"></chartCol>
+        <chartSwiper></chartSwiper>
+        <swiperLine></swiperLine>
       </FlexboxItem>
     </Flexbox>
   </div>
@@ -26,9 +28,13 @@
 <script>
   import {GroupTitle, Flexbox, FlexboxItem} from 'vux'
 
+  import swiperLine from '../common/chartSwiper/swiperLine'
+
   import chartLine from '../common/chart/chartLine'
   import chartCol from '../common/chart/chartCol'
   import percent from '../common/chart/chartPercent'
+
+  import chartSwiper from '../common/chartSwiper/swiperCol'
 
   export default {
     components: {
@@ -37,7 +43,9 @@
       Flexbox,
       FlexboxItem,
       chartLine,
-      chartCol
+      chartCol,
+      chartSwiper,
+      swiperLine
     },
     data() {
       return {
