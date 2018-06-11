@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAIA,SAAU;EACR,gBAAgB,EAAE,kBAAsB;;AAG1C,iBAAkB;EAChB,WAAW,EAAE,GAAG;EAChB,KAAK,ECNO,OAAO;;ADSrB,iBAAkB;EAChB,WAAW,EAAE,CAAC;;AAGhB,YAAa;EACX,UAAU,ECbC,IAAI;;ADgBjB,oCAAqC;EACnC,MAAM,EAAE,eAAe;;AAGzB,0CAA2C;EACzC,UAAU,ECfA,OAAO;EDgBjB,MAAM,EAAE,IAAI;;AAGd,WAAY;EACV,MAAM,EAAE,MAAM",
-"sources": ["vux.scss","var.scss"],
-"names": [],
-"file": "vux.css"
-}

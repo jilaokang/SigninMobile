@@ -1,5 +1,5 @@
 <template>
-    <canvas :id="o_O" class="chart"></canvas>
+  <canvas :id="o_O" class="chart"></canvas>
 </template>
 
 <script>
@@ -12,10 +12,10 @@
         type: Object
       }
     },
-    computed:{
+    computed: {
       // 超级无敌大随机
-      o_O(){
-        return `chart`+Math.floor(Math.random()*10000)
+      o_O() {
+        return `chart` + Math.floor(Math.random() * 10000)
       }
     },
     mounted() {

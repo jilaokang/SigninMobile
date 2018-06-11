@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import { Search, Group, Cell, XButton } from 'vux'
+  import {Search, Group, Cell, XButton} from 'vux'
 
   export default {
     components: {
@@ -27,37 +27,38 @@
       XButton
     },
     methods: {
-      resultClick (item) {
+      resultClick(item) {
         window.alert('you click the result item: ' + JSON.stringify(item))
       },
-      getResult (val) {
+      getResult(val) {
         console.log('on-change', val)
         this.results = val ? getResult(this.value) : []
       },
-      onSubmit () {
+      onSubmit() {
         this.$refs.search.setBlur()
         this.$vux.toast.show({
           type: 'text',
-          position:'top',
+          position: 'top',
           text: 'on submit'
         })
       },
-      onFocus () {
+      onFocus() {
+        this.value = ''
         console.log('on focus')
       },
-      onCancel () {
+      onCancel() {
         console.log('on cancel')
       }
     },
-    data () {
+    data() {
       return {
         results: [],
-        value: 'test'
+        value: ''
       }
     }
   }
 
-  function getResult (val) {
+  function getResult(val) {
     let rs = []
     for (let i = 0; i < 20; i++) {
       rs.push({
@@ -70,7 +71,7 @@
 </script>
 
 <style scoped>
-  #search{
+  #search {
     position: relative;
   }
 </style>

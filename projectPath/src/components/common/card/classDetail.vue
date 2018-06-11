@@ -182,7 +182,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../../../scss/var";
+  @import "../../scss/var";
 
   .classCard {
     height: 100%;

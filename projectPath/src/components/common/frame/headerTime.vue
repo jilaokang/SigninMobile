@@ -38,7 +38,11 @@
 
   export default {
     components: {
-      Datetime, Group, Flexbox, FlexboxItem, XButton
+      Datetime,
+      Group,
+      Flexbox,
+      FlexboxItem,
+      XButton
     },
     data() {
       return {

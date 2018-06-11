@@ -18,7 +18,6 @@
              show-input
              title="输入反馈"
              :input-attrs="{type: 'string'}">
-
     </Confirm>
   </div>
 </template>
@@ -101,7 +100,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../../../scss/var";
+  @import "../../scss/var";
 
   .classCard {
     font-size: 0.88em;

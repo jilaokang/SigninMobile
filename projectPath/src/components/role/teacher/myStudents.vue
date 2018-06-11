@@ -6,7 +6,6 @@
 
 <script>
   import classDetail from '../../common/card/classDetail'
-  import chartColumn from '../../common/chart/chartCol'
 
   export default {
     components: {

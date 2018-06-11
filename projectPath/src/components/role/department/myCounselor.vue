@@ -1,9 +1,9 @@
 <template>
   <div>
     <search></search>
-    <div class="container" @click="display()">
-      <XButton>这是个按钮</XButton>
-    </div>
+    <!--<div class="container" @click="display()">-->
+    <!--<XButton>这是个按钮</XButton>-->
+    <!--</div>-->
     <checklist :style="button?'display:block':'display:none'" title="显示范围" :options="checklist.commonList"
                v-model="checklist.checklist"></checklist>
     <percent :siginValue="siginValue"></percent>

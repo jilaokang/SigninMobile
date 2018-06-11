@@ -11,7 +11,6 @@
 </template>
 
 <script>
-  /* eslint-disable */
   import {Flexbox, FlexboxItem, Grid, GridItem} from 'vux'
 
   export default {

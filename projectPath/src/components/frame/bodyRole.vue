@@ -16,7 +16,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../../scss/var";
+  @import "../scss/var";
 
   .flexTop {
     width: 100%;
@@ -26,7 +26,7 @@
     background-color: #393a3f;
   }
 
-  .margintop20{
-    margin-top: 47px;
+  .margintop20 {
+    margin-top: 46px;
   }
 </style>

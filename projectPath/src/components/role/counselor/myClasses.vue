@@ -13,11 +13,11 @@
     },
     data() {
       return {
-        siginValue:{
-          title:'我班今日签到',
-          today:85,
-          yeasterday:72,
-          lastmonth:75
+        siginValue: {
+          title: '我班今日签到',
+          today: 85,
+          yeasterday: 72,
+          lastmonth: 75
         }
       }
     }

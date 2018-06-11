@@ -1,5 +1,5 @@
 <template>
-    <canvas :id="o_O" class="chart"></canvas>
+  <canvas :id="o_O" class="chart"></canvas>
 </template>
 
 <script>
@@ -34,7 +34,7 @@
       var defs = {
         y: {
           max: chartConfig.max || 100,
-          min:60,
+          min: 60,
           alias: '签到率',
           formatter: function formatter(val) {
             return val + '%';
