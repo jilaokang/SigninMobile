@@ -15,7 +15,7 @@
 |POST|user|number|无|唯一标识符，学生-学号，老师-腾讯通号|15031017|
 ||date|object|无|当前请求时间|Data()|
 ||msg|string|无|学生的异常反馈|我跟辅导员请假了|
-|Get|classList|Array|无|当天课程详细列表|如下|
+|GET|classList|Array|无|当天课程详细列表|如下|
 
 ````javascript
 "classList": [
