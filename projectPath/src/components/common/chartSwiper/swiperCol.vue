@@ -1,7 +1,7 @@
 <template>
   <div>
     <Swiper>
-      <SwiperItem v-for="a in chart">
+      <SwiperItem v-for="a in chart" :key="a">
         <chartCol :chart="a"></chartCol>
       </SwiperItem>
     </Swiper>
