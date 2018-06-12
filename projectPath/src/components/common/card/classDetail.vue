@@ -92,31 +92,10 @@
             name: '钱七',
             success: true
           }, {
-            name: '钱七',
+            name: '白九',
             success: true
           }, {
-            name: '钱七',
-            success: true
-          }, {
-            name: '钱七',
-            success: true
-          }, {
-            name: '钱七',
-            success: true
-          }, {
-            name: '钱七',
-            success: true
-          }, {
-            name: '钱七',
-            success: true
-          }, {
-            name: '钱七',
-            success: true
-          }, {
-            name: '钱七',
-            success: true
-          }, {
-            name: '钱七',
+            name: '李七',
             success: true
           }]
         }, {
