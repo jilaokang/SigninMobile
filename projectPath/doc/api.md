@@ -31,6 +31,7 @@
     "done": true, 
     "signin": true,
     "signout": true,
-  }
+  },
+  ...
 ]
 ````
