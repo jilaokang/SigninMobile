@@ -27,4 +27,12 @@ npm run e2e
 npm test
 ```
 
+### 表格
+
+| Item      |    Value | Qty  |
+| :-: | :-:| :-: |
+| Computer  | 1600 USD |  5   |
+| Phone     |   12 USD |  12  |
+| Pipe      |    1 USD | 234  |
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
