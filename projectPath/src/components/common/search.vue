@@ -26,6 +26,9 @@
       Cell,
       XButton
     },
+    mounted:{
+
+    },
     methods: {
       resultClick(item) {
         window.alert('you click the result item: ' + JSON.stringify(item))
@@ -53,13 +56,15 @@
     data() {
       return {
         results: [],
-        value: ''
+        value: '',
+        data:['你好啊']
       }
     }
   }
 
   function getResult(val) {
     let rs = []
+
     for (let i = 0; i < 20; i++) {
       rs.push({
         title: `${val} result: ${i + 1} `,

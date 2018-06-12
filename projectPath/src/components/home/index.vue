@@ -1,13 +1,11 @@
 <template>
   <div>
     <GroupTitle>今日情况</GroupTitle>
-
     <Flexbox :gutter="16" class="bgWhite">
       <FlexboxItem>
         <percent :siginValue="siginValue"></percent>
       </FlexboxItem>
     </Flexbox>
-
     <GroupTitle>校园概况</GroupTitle>
     <Flexbox :gutter="16">
       <FlexboxItem>
