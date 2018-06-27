@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Swiper>
+    <Swiper :height="this.height">
       <SwiperItem v-for="a in chart" :key="a">
         <chartCol :chart="a"></chartCol>
       </SwiperItem>
@@ -18,6 +18,13 @@
       Swiper,
       SwiperItem
     },
+  computed: {
+    height() {
+      return (window.innerWidth > window.innerHeight
+        ? window.innerHeight - 54
+        : window.innerWidth * 0.707) +40+'px';
+    }
+  },
     data() {
       return {
         chart: [{
