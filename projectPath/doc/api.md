@@ -32,7 +32,7 @@
     "teacher": "何友鸣",
     "location": "学4201室",
     // Boolean: 课程是否结束
-    "done": true, 
+    "done": true,
     "signin": true,
     "signout": true,
   },
@@ -41,3 +41,4 @@
 ````
 
 <br/><br/><br/><br/>
+

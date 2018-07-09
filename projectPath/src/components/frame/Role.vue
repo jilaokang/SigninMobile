@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import headerNav from '../common/frame/headerNav'
+  import headerNav from './Nav'
 
   export default {
     components: {
@@ -27,6 +27,6 @@
   }
 
   .margintop20 {
-    margin-top: 46px;
+    margin-top: 45px;
   }
 </style>

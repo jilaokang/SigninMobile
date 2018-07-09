@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import topTime from '../common/frame/headerTime'
+  import topTime from './Time'
 
   export default {
     components: {

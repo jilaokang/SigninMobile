@@ -1,10 +1,10 @@
 import index from '@/components/index'
 
 import home from '../components/home/index'
-import AppList from '../components/common/frame/bodyAppList';
+import AppList from '../components/frame/AppList';
 
-import topTime from '../components/frame/topTime'
-import bodyRole from '../components/frame/bodyRole'
+import topTime from '../components/frame/Content'
+import bodyRole from '../components/frame/Role'
 
 import myCourse from '../components/role/student/myCourse'
 import myStudents from '../components/role/teacher/myStudents'

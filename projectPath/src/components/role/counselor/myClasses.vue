@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import percent from '../../common/chart/chartPercent'
+  import percent from '../../common/chart/Percent'
 
   export default {
     components: {
