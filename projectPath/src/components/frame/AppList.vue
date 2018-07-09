@@ -85,7 +85,7 @@
             str.push(...this.permission[i].gridList)
           }
         }
-        return str;
+        return str.reverse();
       }
     }
   }
