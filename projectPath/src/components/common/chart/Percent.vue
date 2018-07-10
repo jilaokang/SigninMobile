@@ -29,12 +29,7 @@
   import {XCircle, Flexbox, FlexboxItem} from 'vux'
 
   export default {
-    props: {
-      data: {
-        type: Object,
-        require: true
-      }
-    },
+    props: ['data'],
     components: {
       XCircle,
       Flexbox,

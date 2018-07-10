@@ -20,12 +20,7 @@
   import {XTable, LoadMore} from "vux";
 
   export default {
-    props: {
-      table: {
-        type: Object,
-        require: true
-      }
-    },
+    props: ['table'],
     components: {
       XTable,
       LoadMore

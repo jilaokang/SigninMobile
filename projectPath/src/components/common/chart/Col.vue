@@ -6,12 +6,7 @@
   import F2 from '@antv/f2';
 
   export default {
-    props: {
-      chart: {
-        require: true,
-        type: Object
-      }
-    },
+    props: ['chart'],
     computed: {
       // 超级无敌大随机
       o_O() {
