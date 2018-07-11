@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-for="(list,index) of classList" :key='index' @click="changError(index)">
+    <div v-for="(list,index) of classList" :key='index'>
       <Flexbox class="classCard" :class="cardBg(index)">
         <FlexboxItem :span="1/6">
           <p>{{list.time}}</p>
@@ -14,11 +14,6 @@
         </FlexboxItem>
       </Flexbox>
     </div>
-    <Confirm v-model="show"
-             show-input
-             title="输入反馈"
-             :input-attrs="{type: 'string'}">
-    </Confirm>
   </div>
 </template>
 
@@ -26,51 +21,28 @@
   import {Flexbox, FlexboxItem, Confirm} from 'vux'
 
   export default {
-    components: {
-      Flexbox, FlexboxItem, Confirm
-    },
+    components: {Flexbox, FlexboxItem, Confirm},
     data() {
       return {
-        show: false,
         classList: [{
-          time: '1-2',
-          classname: '计算机网络原理',
-          teacher: '何友鸣',
-          location: '学4201室',
+          time: '',
+          classname: '',
+          teacher: '',
+          location: '',
           done: true,
           signin: true,
           signout: true,
-          success: '未上课' || null
-        }, {
-          time: '3-4',
-          classname: 'Linux操作系统',
-          teacher: '张三',
-          location: '学4303室',
-          done: true,
-          signin: false,
-          signout: true,
-          success: '未上课' || null
-        }, {
-          time: '5-6',
-          classname: 'SQL数据库设计与管理',
-          teacher: '冯浩',
-          location: '计5201室',
-          done: false,
-          signin: false,
-          signout: true,
-          success: '未上课' || null
-        }, {
-          time: '7-8',
-          classname: '网络通讯原理',
-          teacher: '王五',
-          location: '学4103室',
-          done: false,
-          signin: false,
-          signout: true,
-          success: ''
+          success: '' || null
         }]
       }
     },
+    mounted() {
+      axios("https://www.easy-mock.com/mock/5b44642c990dfa4736f4d279/sigin/student/myCourse#!method=get")
+        .then(res => {
+          this.classList = res.data.classList
+        })
+    }
+    ,
     methods: {
       cardBg(index) {
         let classList = this.classList[index];
@@ -86,13 +58,6 @@
         } else {
           classList.success = '未开始'
           return ''
-        }
-      },
-      changError(index) {
-        let a = this.cardBg(index)
-
-        if (a === 'bgRed') {
-          this.show = true
         }
       }
     }

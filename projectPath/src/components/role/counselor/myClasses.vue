@@ -8,9 +8,7 @@
   import percent from '../../common/chart/Percent'
 
   export default {
-    components: {
-      percent
-    },
+    components: {percent},
     data() {
       return {
         siginValue: {
@@ -23,7 +21,3 @@
     }
   }
 </script>
-
-<style scoped>
-
-</style>

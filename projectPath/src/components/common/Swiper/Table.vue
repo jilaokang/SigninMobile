@@ -1,38 +1,28 @@
 <template>
-  <div>
-    <Swiper :height="this.height">
-      <SwiperItem v-for="(item, index) in data" :key="index" >
-        <Table class="Table" :table="item"></Table>
-      </SwiperItem>
-    </Swiper>
-  </div>
+  <mt-swipe :auto="0" class="tableswiper">
+    <mt-swipe-item v-for="(item, index) in data" :key="index">
+      <Table class="Table" :table="item"></Table>
+    </mt-swipe-item>
+  </mt-swipe>
 </template>
 
 <script>
-import { Swiper, SwiperItem } from "vux";
-import Table from "../chart/Table";
+  import Table from "../chart/Table";
 
-export default {
-  components: {
-    Table,
-    Swiper,
-    SwiperItem
-  },
-  props: {
-    data: {
-      type: Array,
-      required: true
+  export default {
+    components: {Table},
+    props: ['data', 'height'],
+    mounted() {
+      setTimeout(() => {
+        document.getElementsByClassName('tableswiper')[0].style.height = this.height()
+      }, 2000)
     }
-  },
-  data() {
-    return {
-      height: ""
-    };
-  },
-  mounted() {
-    this.height =
-      document.getElementsByClassName("Table")[0].offsetHeight + "px";
   }
-};
 </script>
+
+<style scoped>
+  .tableswiper{
+    background: white;
+  }
+</style>
 

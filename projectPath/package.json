@@ -16,6 +16,7 @@
   "dependencies": {
     "@antv/f2": "^3.1.9",
     "fastclick": "^1.0.6",
+    "mint-ui": "^2.2.13",
     "source-map": "^0.7.3",
     "vue": "^2.5.2",
     "vue-echarts": "^3.0.7",
