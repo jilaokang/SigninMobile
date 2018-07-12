@@ -1,6 +1,9 @@
 <template>
   <div>
-    <search :searchArry="searchArry"></search>
+    <search :searchArry="searchArry">
+      <h1 slot="kaso">ddd</h1>
+      <template slot="father">aaa</template>
+    </search>
     <percent :data="data.percent"></percent>
     <chartLine :data="data.chart"></chartLine>
     <Table :data="data.table" :height="tableHeight"></Table>

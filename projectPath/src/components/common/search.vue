@@ -1,5 +1,6 @@
 <template>
   <div>
+    <slot name="father"></slot>
     <search
       @result-click="resultClick"
       @on-change="getResult"
@@ -8,6 +9,7 @@
       auto-scroll-to-top
       top="48px"
       ref="search"></search>
+    <slot name="kaso"></slot>
   </div>
 </template>
 
