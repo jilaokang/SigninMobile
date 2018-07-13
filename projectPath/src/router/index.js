@@ -1,6 +1,6 @@
 import index from '@/views/index'
 
-import home from '../views/home/index'
+import home from '../views/frame/index'
 import AppList from '../views/frame/appList';
 
 import topTime from '../views/frame/content'
@@ -20,7 +20,7 @@ import College from '../views/pages/counselor/college'
 import Department from '../views/pages/counselor/department'
 
 
-import err404 from '../views/err/404'
+import err404 from '../views/common/404'
 
 
 export default [

@@ -57,18 +57,19 @@
             url: "/role/counselor"
           }, {
             access: 2,
+            special:true,
             label: "班级情况",
             icon: "icon-renqun",
             color: "#4695d6",
             url: "/role/time/class"
           }, {
-            access: 2,
+            access: 3,
             label: "缺课学生表",
             icon: "icon-error",
             color: "#fed95c",
             url: "/role/time/absent"
           }, {
-            access: 2,
+            access: 3,
             special: true,
             label: '签到修改',
             icon: 'icon-xiugai',
@@ -76,7 +77,7 @@
             url: "/role/time/change"
           },
           {
-            access: 3,
+            access: 4,
             special: true,
             label: '课程信息',
             icon: 'icon-kechengbiao',
