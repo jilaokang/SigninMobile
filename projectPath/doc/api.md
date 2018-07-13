@@ -8,7 +8,7 @@
 |      | role     | string | "学生"，"老师"，"辅导员"，"系主任"，"校领导"取以上值中之一 | 学生     |
 |      | userName | string | 用户姓名                                                   | 钱博康   |
 
-````json
+````javascript
 {
   // 用户的唯一标示
   "user": "15031017",
@@ -28,22 +28,22 @@
 | GET  | classList | Array  | 依请求时间反馈对应课程详细列表 | 如下     |
 
 ```javascript
-        "classList": [
-          {
-          // 一天分为["1-2", "3-4", "5-6", "7-8"]共四节课
-          "time": "1-2",
-          "classname": "计算机网络原理",
-          "teacher": "何友鸣",
-          "location": "学4201室",
-          // 课程是否结束
-          "done": true,
-          // 签到情况
-          "signin": true,
-          // 签退情况
-          "signout": true,
-          },
-          ...
-        ]
+  "classList": [
+    {
+        // 一天分为["1-2", "3-4", "5-6", "7-8"]共四节课
+        "time": "1-2",
+        "classname": "计算机网络原理",
+        "teacher": "何友鸣",
+        "location": "学4201室",
+        // 课程是否结束
+        "done": true,
+        // 签到情况
+        "signin": true,
+        // 签退情况
+        "signout": true,
+      },
+      ...
+  ]
 ```
 
 ## 复用组件
