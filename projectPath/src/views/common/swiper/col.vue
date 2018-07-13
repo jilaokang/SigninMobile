@@ -10,7 +10,7 @@
 
 <script>
   import {Swiper, SwiperItem} from 'vux'
-  import chartCol from '../chart/Col'
+  import chartCol from '../chart/col'
 
   export default {
     components: {

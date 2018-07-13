@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import headerNav from './Nav'
+  import headerNav from './nav'
 
   export default {
     components: {

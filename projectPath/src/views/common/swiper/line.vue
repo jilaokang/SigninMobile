@@ -10,7 +10,7 @@
 
 <script>
   import {Swiper, SwiperItem} from "vux";
-  import chartLine from "../chart/Line";
+  import chartLine from "../chart/line";
 
   export default {
     props: ['data'],

@@ -1,21 +1,18 @@
 <template>
   <div>
-    <search :searchArry="searchArry">
-      <h1 slot="kaso">ddd</h1>
-      <template slot="father">aaa</template>
-    </search>
+    <search :searchArry="searchArry"></search>
     <percent :data="data.percent"></percent>
     <chartLine :data="data.chart"></chartLine>
-    <Table :data="data.table" :height="tableHeight"></Table>
+    <Table :data="data.table"></Table>
   </div>
 </template>
 
 <script>
 
-  import chartLine from "../../common/Swiper/Line.vue";
-  import percent from "../../common/chart/Percent";
-  import search from "../../common/search";
-  import Table from "../../common/Swiper/Table.vue";
+  import chartLine from "../../common/swiper/line.vue";
+  import percent from "../../common/chart/percent";
+  import search from "../../common/card/search";
+  import Table from "../../common/swiper/table.vue";
 
   export default {
     components: {chartLine, percent, search, Table},
@@ -53,11 +50,6 @@
           arr.push(item[0]);
         }
         return arr;
-      },
-    },
-    methods: {
-      tableHeight() {
-        return document.querySelector('.Table').offsetHeight + 40 + 'px'
       }
     }
   }

@@ -23,11 +23,11 @@
 
 <script>
 import { GroupTitle, Flexbox, FlexboxItem } from "vux";
-import swiperLine from "../common/Swiper/Line";
-import chartLine from "../common/chart/Line";
-import chartCol from "../common/chart/Col";
-import percent from "../common/chart/Percent";
-import chartSwiper from "../common/Swiper/Col";
+import swiperLine from "../common/swiper/line";
+import chartLine from "../common/chart/line";
+import chartCol from "../common/chart/col";
+import percent from "../common/chart/percent";
+import chartSwiper from "../common/swiper/col";
 
 export default {
   components: {GroupTitle, percent, Flexbox, FlexboxItem, chartLine, chartCol, chartSwiper, swiperLine},

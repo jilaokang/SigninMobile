@@ -29,57 +29,59 @@
             label: "校园情况",
             icon: "icon-qiye",
             color: "#4695d6",
-            url: "/role/effect/class"
+            url: "/role/college"
           },
           {
             access: 0,
             label: "系部情况",
             icon: "icon-huijihesuan",
             color: "#7ebc59",
-            url: "/role/effect/class"
+            url: "/role/department"
           }, {
             access: 1,
             label: "课程情况",
             icon: "icon-xinrenkecheng",
             color: "#fa6e57",
-            url: "/role/"
+            url: "/role/course"
           }, {
             access: 1,
             label: "教师情况",
             icon: "icon-jiaolian1",
             color: "#fed95c",
-            url: "/role/"
+            url: "/role/teacher"
           }, {
             access: 1,
             label: "辅导员情况",
             icon: "icon-person",
             color: "#4695d6",
-            url: "/role/myCounselor"
+            url: "/role/counselor"
           }, {
             access: 2,
             label: "班级情况",
             icon: "icon-renqun",
             color: "#4695d6",
-            url: "/role/classdetail"
+            url: "/role/time/class"
           }, {
             access: 2,
             label: "缺课学生表",
             icon: "icon-error",
             color: "#fed95c",
-            url: "/role/classdetail/counselor"
+            url: "/role/time/absent"
           }, {
             access: 2,
+            special: true,
             label: '签到修改',
             icon: 'icon-xiugai',
             color: '#7ebc59',
-            url: "/role/topTime/myStudents"
+            url: "/role/time/change"
           },
           {
             access: 3,
+            special: true,
             label: '课程信息',
             icon: 'icon-kechengbiao',
             color: '#fa6e57',
-            url: "/role/topTime/myCourse"
+            url: "/role/time/lesson"
           }
         ]
       }
@@ -88,9 +90,15 @@
       // 身份验证部分
       axios('https://www.easy-mock.com/mock/5b44642c990dfa4736f4d279/sigin/user#!method=GET&queryParameters=%5B%7B%22enabled%22%3Atrue%2C%22key%22%3A%22https%3A%2F%2Fwww.easy-mock.com%2Fmock%2F5b44642c990dfa4736f4d279%2Fsigin%2Fuser%23!method%22%2C%22value%22%3A%22get%22%7D%5D&body=&headers=%5B%5D')
         .then(res => {
-          // res.data.role 0-校领导 1-系主任 2-辅导员、老师 3-学生
+          // res.data.pages 0-校领导 1-系主任 2-辅导员、老师 3-学生
           this.applist = this.permission.filter(data => {
-              if (res.data.role <= data.access) {
+              if (res.data.role == 6) {
+                return data
+              }
+              if (res.data.role <= data.access && !data.special) {
+                return data
+              }
+              if (res.data.role == data.access && data.special) {
                 return data
               }
             }

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import topTime from './Time'
+  import topTime from './time'
 
   export default {
     components: {

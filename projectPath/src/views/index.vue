@@ -13,9 +13,7 @@
   import footerBar from './frame/footerBar'
 
   export default {
-    components: {
-      footerBar
-    }
+    components: {footerBar}
   }
 </script>
 

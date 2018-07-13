@@ -1,17 +1,26 @@
-import index from '@/components/index'
+import index from '@/views/index'
 
-import home from '../components/home/index'
-import AppList from '../components/frame/AppList';
+import home from '../views/home/index'
+import AppList from '../views/frame/appList';
 
-import topTime from '../components/frame/Content'
-import bodyRole from '../components/frame/Role'
+import topTime from '../views/frame/content'
+import bodyRole from '../views/frame/role'
 
-import myCourse from '../components/role/student/myCourse'
-import myStudents from '../components/role/teacher/myStudents'
-import myClasses from '../components/role/counselor/myClasses'
-import myCounselor from '../components/role/department/myCounselor'
+import Lesson from '../views/pages/student/myCourse'
+import Change from '../views/pages/teacher/change'
+import Counselor from '../views/pages/department/counselor'
 
-import err404 from '../components/err/404'
+import Absent from '../views/pages/teacher/absent'
+import Class from '../views/pages/teacher/class'
+
+import Teacher from '../views/pages/department/teacher'
+import Course from '../views/pages/department/course'
+
+import College from '../views/pages/counselor/college'
+import Department from '../views/pages/counselor/department'
+
+
+import err404 from '../views/err/404'
 
 
 export default [{
@@ -30,22 +39,38 @@ export default [{
       path: 'role',
       component: bodyRole,
       children: [{
-        path: "topTime",
+        path: "time",
         component: topTime,
         children: [{
-          path: 'myCourse',
-          component: myCourse
+          path: 'lesson',
+          component: Lesson
         }, {
-          path: 'myStudents',
-          component: myStudents
+          path: "absent",
+          component: Absent
         }, {
-          path: 'myClasses',
-          component: myClasses
+          path: "class",
+          component: Class
+        }, {
+          path: "change",
+          component: Change
         }]
-      }, {
-        path: 'myCounselor',
-        component: myCounselor
-      }]
+      },
+        {
+          path: "counselor",
+          component: Counselor
+        }, {
+          path: "teacher",
+          component: Teacher
+        }, {
+          path: "course",
+          component: Course
+        }, {
+          path: "college",
+          component: College
+        }, {
+          path: "department",
+          component: Department
+        }]
     }
   ]
 }, {
