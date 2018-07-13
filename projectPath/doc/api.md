@@ -8,7 +8,7 @@
 
 #### ① 百分比图
 ````javascript
-    percent: {
+  percent: {
       // 圈内标题
       title: "本系今日签到",
       // 今日签到率
