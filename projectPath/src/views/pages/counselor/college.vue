@@ -1,9 +1,8 @@
 <template>
   <div>
-    <search :searchArry="searchArry"></search>
     <percent :data="data.percent"></percent>
     <chartLine :data="data.chart"></chartLine>
-    <Table :data="data.table"></Table>
+    <Col :data="data.table"></Col>
   </div>
 </template>
 
@@ -12,10 +11,10 @@
   import chartLine from "../../common/swiper/line.vue";
   import percent from "../../common/chart/percent";
   import search from "../../common/card/search";
-  import Table from "../../common/swiper/table.vue";
+  import Col from '../../common/swiper/col'
 
   export default {
-    components: {chartLine, percent, search, Table},
+    components: {chartLine, percent, search, Col},
     data() {
       return {
         data: {
