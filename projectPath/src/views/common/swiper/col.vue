@@ -13,18 +13,14 @@
   import chartCol from '../chart/col'
 
   export default {
-    components: {
-      chartCol,
-      Swiper,
-      SwiperItem
+    components: {chartCol, Swiper, SwiperItem},
+    computed: {
+      height() {
+        return (window.innerWidth > window.innerHeight
+          ? window.innerHeight - 54
+          : window.innerWidth * 0.707) + 40 + 'px';
+      }
     },
-  computed: {
-    height() {
-      return (window.innerWidth > window.innerHeight
-        ? window.innerHeight - 54
-        : window.innerWidth * 0.707) +40+'px';
-    }
-  },
     data() {
       return {
         chart: [{

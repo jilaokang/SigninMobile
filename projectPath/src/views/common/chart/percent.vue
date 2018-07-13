@@ -30,11 +30,7 @@
 
   export default {
     props: ['data'],
-    components: {
-      XCircle,
-      Flexbox,
-      FlexboxItem
-    }
+    components: {XCircle, Flexbox, FlexboxItem}
   }
 </script>
 

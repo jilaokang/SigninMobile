@@ -21,9 +21,6 @@
 
   export default {
     props: ['table'],
-    components: {
-      XTable,
-      LoadMore
-    }
+    components: {XTable, LoadMore}
   };
 </script>
