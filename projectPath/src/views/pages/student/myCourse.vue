@@ -37,7 +37,7 @@
       }
     },
     mounted() {
-      axios("https://www.easy-mock.com/mock/5b44642c990dfa4736f4d279/sigin/student/myCourse#!method=get")
+      axios("https://www.easy-mock.com/mock/5b47fcbebad3321130bf0ab0/sigin_copy/student/myCourse#!method=get")
         .then(res => {
           this.classList = res.data.classList
         })

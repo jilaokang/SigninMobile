@@ -38,7 +38,7 @@ export default {
     }
   },
   mounted(){
-    axios('https://www.easy-mock.com/mock/5b44642c990dfa4736f4d279/sigin/department/counselor#!method=get')
+    axios('https://www.easy-mock.com/mock/5b47fcbebad3321130bf0ab0/sigin_copy/department/counselor#!method=get')
       .then( res =>{
         this.siginValue = res.data.data.percent
         this.chart =res.data.data.chart

@@ -88,7 +88,7 @@
     },
     created() {
       // 身份验证部分
-      axios('https://www.easy-mock.com/mock/5b44642c990dfa4736f4d279/sigin/user#!method=GET&queryParameters=%5B%7B%22enabled%22%3Atrue%2C%22key%22%3A%22https%3A%2F%2Fwww.easy-mock.com%2Fmock%2F5b44642c990dfa4736f4d279%2Fsigin%2Fuser%23!method%22%2C%22value%22%3A%22get%22%7D%5D&body=&headers=%5B%5D')
+      axios('https://www.easy-mock.com/mock/5b47fcbebad3321130bf0ab0/sigin_copy/user#!method=get')
         .then(res => {
           // res.data.pages 0-校领导 1-系主任 2-辅导员、老师 3-学生
           this.applist = this.permission.filter(data => {

@@ -30,7 +30,10 @@ export default [{
   children: [
     {
       path: 'app',
-      component: AppList
+      component: AppList,
+      meta:{
+        keepAlive:true
+      }
     }, {
       path: 'home',
       component: home
